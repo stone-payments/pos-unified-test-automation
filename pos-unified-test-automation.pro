@@ -35,3 +35,9 @@ FORMS += \
 
 RESOURCES += \
     res/resource.qrc
+
+# add open CV
+unix {
+    CONFIG += link_pkgconfig
+    PKGCONFIG += opencv
+}
