@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <QTimer>
-#include <opencv2/opencv.hpp>
+
+#include "visionworker.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,11 +20,11 @@ public:
     ~MainWindow();
 private:
     Ui::MainWindow *ui;
-    QGraphicsScene * m_scene;
-    cv::VideoCapture capture;
-    QTimer* m_timer;
+    QGraphicsScene *m_scene;
+    VisionWorker *m_visionWorker;
+
 private slots:
-    void updateCameraView();
+    void updateCameraView(QImage);
 };
 
 #endif // MAINWINDOW_H
