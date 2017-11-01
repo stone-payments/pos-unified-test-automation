@@ -43,3 +43,6 @@ unix {
     CONFIG += link_pkgconfig
     PKGCONFIG += opencv
 }
+
+INCLUDEPATH += /usr/include/AtCore
+LIBS += -L/usr/lib -lAtCore
