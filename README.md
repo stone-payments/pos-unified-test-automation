@@ -3,7 +3,7 @@ Pos Unified Test Automation is the core of a robotic system to automate chip and
 
 This software is part of an Final Graduation Project (in progress) on Electronic Engineering at [Federal University of Rio de Janeiro](http://www.poli.ufrj.br/).
 
----
+
 ## Requirements
 
 #### Dependencies
@@ -15,7 +15,7 @@ This software is part of an Final Graduation Project (in progress) on Electronic
 - 3D Printer or CNC (Consult the firmwares supported by AtCore)
 - Webcam (recomended at least 720p)
 - **(optional)** Credit Card insertion and swipe module (under development)
----
+
 ##  Authors
 
 - [Luciano Santos](https://github.com/luckvargas), Developer
@@ -24,5 +24,3 @@ This software is part of an Final Graduation Project (in progress) on Electronic
 Special Thanks To 
 - [Heraldo Luís Silveira de Almeida, D.Sc.](http://www.del.ufrj.br/~heraldo/) - Project Advisor
 - [Flávio Luis de Mello, D.Sc.](http://www.del.ufrj.br/~fmello) - Project Advisor
-
-Project is under development! Please have that in mind while testing!
