@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,11 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         src/main.cpp \
         src/mainwindow.cpp \
-    src/visionworker.cpp
+        src/visionworker.cpp \
+        src/gpio.cpp \
+    src/printercontroller.cpp
 
 HEADERS += \
         src/mainwindow.h \
-    src/visionworker.h
+        src/visionworker.h \
+        src/gpio.h \
+    src/printercontroller.h
 
 FORMS += \
         ui/mainwindow.ui

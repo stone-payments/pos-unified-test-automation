@@ -6,6 +6,7 @@
 #include <QTimer>
 
 #include "visionworker.h"
+#include "printercontroller.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,9 +23,11 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene *m_scene;
     VisionWorker *m_visionWorker;
+    PrinterController *m_printerController;
 
 private slots:
     void updateCameraView(QImage);
+    void on_buttonMove_clicked();
 };
 
 #endif // MAINWINDOW_H
