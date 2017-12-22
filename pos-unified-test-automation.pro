@@ -28,13 +28,15 @@ SOURCES += \
         src/mainwindow.cpp \
         src/visionworker.cpp \
         src/gpio.cpp \
-    src/printercontroller.cpp
+        src/printercontroller.cpp \
+        src/cardcontroller.cpp
 
 HEADERS += \
         src/mainwindow.h \
         src/visionworker.h \
         src/gpio.h \
-    src/printercontroller.h
+        src/printercontroller.h \
+        cardcontroller.h
 
 FORMS += \
         ui/mainwindow.ui
