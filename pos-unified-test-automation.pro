@@ -27,14 +27,12 @@ SOURCES += \
         src/main.cpp \
         src/mainwindow.cpp \
         src/visionworker.cpp \
-        src/gpio.cpp \
         src/printercontroller.cpp \
         src/cardcontroller.cpp
 
 HEADERS += \
         src/mainwindow.h \
         src/visionworker.h \
-        src/gpio.h \
         src/printercontroller.h \
         cardcontroller.h
 
