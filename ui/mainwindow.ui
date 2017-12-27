@@ -19,42 +19,81 @@
      <widget class="QGraphicsView" name="cameraView"/>
     </item>
     <item>
-     <layout class="QFormLayout" name="formLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_x">
-        <property name="text">
-         <string>X: </string>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>3D Printer</string>
         </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_x">
+             <property name="text">
+              <string>X: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_y">
+             <property name="text">
+              <string>Y: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="dy"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_z">
+             <property name="text">
+              <string>Z: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="dz"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QPushButton" name="buttonMove">
+             <property name="text">
+              <string>MOVE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="dx"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="dx"/>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_y">
-        <property name="text">
-         <string>Y: </string>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Card Actuator</string>
         </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="dy"/>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLineEdit" name="dz"/>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_z">
-        <property name="text">
-         <string>Z: </string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QPushButton" name="buttonMove">
-        <property name="text">
-         <string>MOVE</string>
-        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPushButton" name="buttonInsertCard">
+           <property name="text">
+            <string>INSERT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonRemoveCard">
+           <property name="text">
+            <string>REMOVE</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>

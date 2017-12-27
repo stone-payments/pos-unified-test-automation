@@ -7,6 +7,7 @@
 
 #include "visionworker.h"
 #include "printercontroller.h"
+#include "cardcontroller.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,10 +25,13 @@ private:
     QGraphicsScene *m_scene;
     VisionWorker *m_visionWorker;
     PrinterController *m_printerController;
+    CardController *m_cardController;
 
 private slots:
     void updateCameraView(QImage);
     void on_buttonMove_clicked();
+    void on_buttonInsertCard_clicked();
+    void on_buttonRemoveCard_clicked();
 };
 
 #endif // MAINWINDOW_H
