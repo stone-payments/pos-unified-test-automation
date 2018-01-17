@@ -34,7 +34,7 @@ HEADERS += \
         src/mainwindow.h \
         src/visionworker.h \
         src/printercontroller.h \
-        cardcontroller.h
+        src/cardcontroller.h
 
 FORMS += \
         ui/mainwindow.ui
