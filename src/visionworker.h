@@ -11,11 +11,11 @@ class VisionWorker : public QObject
 {
     Q_OBJECT
 public:
-    explicit VisionWorker(QObject *parent = nullptr);
-    cv::VideoCapture capture;
+    VisionWorker(QObject *parent = nullptr);
 private:
     QTimer* m_timer;
 
+    cv::VideoCapture capture;
 signals:
     void imageChanged(QImage);
 

@@ -8,15 +8,24 @@ class PrinterController : public QObject
 {
     Q_OBJECT
 public:
-    explicit PrinterController(QObject *parent = nullptr);
-
     void moveAxis(uint dx, uint dy, uint dz);
-signals:
 
-public slots:
+    /** Singleton implementation **/
+    static PrinterController& instance()
+    {
+        static PrinterController instance;
+        return instance;
+    }
+    /******************************/
 private:
+    /** Singleton implementation **/
+    PrinterController();
+    PrinterController (PrinterController const&);
+    PrinterController& operator=(PrinterController const&);
+    /******************************/
+
     AtCore core;
-    void initConnectsToAtCore();
+    void initConnectionToAtCore();
 };
 
 #endif // PRINTERCONTROLLER_H

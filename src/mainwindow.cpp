@@ -7,7 +7,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow),
     m_scene(new QGraphicsScene(parent)),
     m_visionWorker(new VisionWorker),
-    m_printerController(new PrinterController),
     m_cardController(new CardController)
 {
     ui->setupUi(this);
@@ -32,7 +31,7 @@ void MainWindow::on_buttonMove_clicked()
     uint dy = ui->dy->text().toInt();
     uint dz = ui->dz->text().toInt();
 
-    m_printerController->moveAxis(dx, dy, dz);
+    PrinterController::instance().moveAxis(dx, dy, dz);
 }
 
 void MainWindow::on_buttonInsertCard_clicked()

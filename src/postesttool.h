@@ -2,6 +2,9 @@
 #define POSTESTTOOL_H
 
 #include <QObject>
+#include "printercontroller.h"
+#include "visionworker.h"
+
 
 class PosTestTool : public QObject
 {
@@ -12,6 +15,9 @@ public:
 signals:
 
 public slots:
+
+private:
+
 };
 
 #endif // POSTESTTOOL_H

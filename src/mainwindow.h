@@ -24,7 +24,6 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene *m_scene;
     VisionWorker *m_visionWorker;
-    PrinterController *m_printerController;
     CardController *m_cardController;
 
 private slots:

@@ -3,7 +3,7 @@
 #include <AtCore/GCodeCommands>
 #include <QDebug>
 
-PrinterController::PrinterController(QObject *parent) : QObject(parent)
+PrinterController::PrinterController()
 {
     core.initSerial("ttyUSB0", 115200); // TODO: Auto detect usb port.
     core.home();
@@ -19,7 +19,7 @@ void PrinterController::moveAxis(uint dx, uint dy, uint dz)
     core.setAbsolutePosition();
 }
 
-void PrinterController::initConnectsToAtCore()
+void PrinterController::initConnectionToAtCore()
 {
 
 }
