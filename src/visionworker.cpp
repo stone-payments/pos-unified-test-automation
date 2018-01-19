@@ -1,9 +1,8 @@
 #include <QImage>
 #include "visionworker.h"
 
-VisionWorker::VisionWorker(QObject *parent) :
-    QObject(parent),
-    m_timer(new QTimer(parent))
+VisionWorker::VisionWorker() :
+    m_timer(new QTimer(this))
 {
     // Default webcam
     capture.open(0);

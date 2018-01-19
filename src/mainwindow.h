@@ -23,7 +23,6 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *m_scene;
-    VisionWorker *m_visionWorker;
     CardController *m_cardController;
 
 private slots:

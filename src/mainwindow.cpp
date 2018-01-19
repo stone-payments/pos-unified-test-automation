@@ -6,13 +6,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     m_scene(new QGraphicsScene(parent)),
-    m_visionWorker(new VisionWorker),
     m_cardController(new CardController)
 {
     ui->setupUi(this);
     ui->cameraView->setScene(m_scene);
 
-    connect(m_visionWorker, &VisionWorker::imageChanged, this, &MainWindow::updateCameraView);
+    connect(&VisionWorker::instance(), &VisionWorker::imageChanged, this, &MainWindow::updateCameraView);
 }
 
 MainWindow::~MainWindow()

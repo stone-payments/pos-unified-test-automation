@@ -11,8 +11,20 @@ class VisionWorker : public QObject
 {
     Q_OBJECT
 public:
-    VisionWorker(QObject *parent = nullptr);
+
+    /** Singleton implementation **/
+    static VisionWorker& instance()
+    {
+        static VisionWorker instance;
+        return instance;
+    }
+    /******************************/
 private:
+    /** Singleton implementation **/
+    VisionWorker();
+    VisionWorker (VisionWorker const&);
+    VisionWorker& operator=(VisionWorker const&);
+    /******************************/
     QTimer* m_timer;
 
     cv::VideoCapture capture;
