@@ -5,8 +5,7 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    m_scene(new QGraphicsScene(parent)),
-    m_cardController(new CardController)
+    m_scene(new QGraphicsScene(parent))
 {
     ui->setupUi(this);
     ui->cameraView->setScene(m_scene);
