@@ -1,6 +1,6 @@
-#include "mousecontroller.h"
+#include "touchcontroller.h"
 
-MouseController::MouseController()
+TouchController::TouchController(QObject *parent): QObject(parent)
 {
 
 }

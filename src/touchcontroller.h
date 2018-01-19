@@ -1,11 +1,13 @@
 #ifndef MOUSECONTROLLER_H
 #define MOUSECONTROLLER_H
 
+#include <QObject>
 
-class TouchController
+class TouchController: public QObject
 {
+    Q_OBJECT
 public:
-    TouchController();
+    explicit TouchController(QObject *parent = nullptr);
 
     void move(int dx, int dy);
     void click(int x, int y);

@@ -6,7 +6,7 @@
 #include "visionworker.h"
 #include "cardcontroller.h"
 #include "keyboardcontroller.h"
-#include "mousecontroller.h"
+#include "touchcontroller.h"
 
 class PosTestTool : public QObject
 {
