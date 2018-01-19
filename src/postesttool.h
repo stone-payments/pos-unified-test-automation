@@ -5,7 +5,8 @@
 #include "printercontroller.h"
 #include "visionworker.h"
 #include "cardcontroller.h"
-
+#include "keyboardcontroller.h"
+#include "mousecontroller.h"
 
 class PosTestTool : public QObject
 {
@@ -22,6 +23,8 @@ public slots:
 
 private:
     CardController m_cardController;
+    TouchController m_touchController;
+    KeyboardController m_keyboardController;
     PrinterController *m_printerControllerInstance;
     VisionWorker *m_visionWorkerInstance;
 };

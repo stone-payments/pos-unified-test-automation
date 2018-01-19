@@ -29,20 +29,24 @@ SOURCES += \
         src/visionworker.cpp \
         src/printercontroller.cpp \
         src/cardcontroller.cpp \
-    src/postesttool.cpp
+        src/postesttool.cpp \
+        src/keyboardcontroller.cpp \
+        src/touchcontroller.cpp
 
 HEADERS += \
         src/mainwindow.h \
         src/visionworker.h \
         src/printercontroller.h \
         src/cardcontroller.h \
-    src/postesttool.h
+        src/postesttool.h \
+        src/keyboardcontroller.h \
+        src/touchcontroller.h
 
 FORMS += \
         ui/mainwindow.ui
 
 RESOURCES += \
-    res/resource.qrc
+        res/resource.qrc
 
 # add open CV
 unix {
@@ -50,5 +54,6 @@ unix {
     PKGCONFIG += opencv
 }
 
+# add AtCore
 INCLUDEPATH += /usr/include/AtCore
 LIBS += -L/usr/lib -lAtCore
