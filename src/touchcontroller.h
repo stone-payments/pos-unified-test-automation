@@ -1,7 +1,9 @@
-#ifndef MOUSECONTROLLER_H
-#define MOUSECONTROLLER_H
+#ifndef TOUCHCONTROLLER_H
+#define TOUCHCONTROLLER_H
 
 #include <QObject>
+#include "printercontroller.h"
+#include "visionworker.h"
 
 class TouchController: public QObject
 {
@@ -14,6 +16,9 @@ public:
     void press(int x, int y);
     void release();
 
+private:
+    PrinterController *m_printerControllerInstance;
+    VisionWorker *m_visionWorkerInstance;
 };
 
-#endif // MOUSECONTROLLER_H
+#endif // TOUCHCONTROLLER_H

@@ -2,6 +2,8 @@
 #define KEYBOARDCONTROLLER_H
 
 #include <QObject>
+#include "printercontroller.h"
+#include "visionworker.h"
 
 class KeyboardController : public QObject
 {
@@ -16,6 +18,10 @@ public:
 signals:
 
 public slots:
+
+private:
+    PrinterController *m_printerControllerInstance;
+    VisionWorker *m_visionWorkerInstance;
 };
 
 #endif // KEYBOARDCONTROLLER_H

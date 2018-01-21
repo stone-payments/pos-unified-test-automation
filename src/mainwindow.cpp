@@ -34,10 +34,10 @@ void MainWindow::on_buttonMove_clicked()
 
 void MainWindow::on_buttonInsertCard_clicked()
 {
-    m_cardController->insert();
+    m_posTestTool.insertCard();
 }
 
 void MainWindow::on_buttonRemoveCard_clicked()
 {
-    m_cardController->remove();
+    m_posTestTool.removeCard();
 }

@@ -25,8 +25,8 @@ private:
     VisionWorker (VisionWorker const&);
     VisionWorker& operator=(VisionWorker const&);
     /******************************/
-    QTimer* m_timer;
 
+    QTimer* m_timer;
     cv::VideoCapture capture;
 signals:
     void imageChanged(QImage);

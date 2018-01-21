@@ -5,9 +5,7 @@
 #include <QGraphicsScene>
 #include <QTimer>
 
-#include "visionworker.h"
-#include "printercontroller.h"
-#include "cardcontroller.h"
+#include "postesttool.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,7 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *m_scene;
-    CardController *m_cardController;
+    PosTestTool m_posTestTool;
 
 private slots:
     void updateCameraView(QImage);
