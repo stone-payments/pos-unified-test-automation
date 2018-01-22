@@ -1,6 +1,11 @@
 #include <QImage>
 #include "visionworker.h"
 
+QPointF VisionWorker::getCharPosition(QChar character)
+{
+    return QPointF(0,0);
+}
+
 VisionWorker::VisionWorker() :
     m_timer(new QTimer(this))
 {

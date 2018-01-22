@@ -2,6 +2,7 @@
 #define KEYBOARDCONTROLLER_H
 
 #include <QObject>
+#include <QKeyEvent>
 #include "printercontroller.h"
 #include "visionworker.h"
 
@@ -11,14 +12,10 @@ class KeyboardController : public QObject
 public:
     explicit KeyboardController(QObject *parent = nullptr);
 
-    void keyPress(int key);
-    void keyPressAndHold(int key, int milliseconds);
-    void keyDown(int key);
+    void keyPress(Qt::Key key);
+    void keyPressAndHold(Qt::Key key, int milliseconds);
+    void keyDown(Qt::Key);
     void keyUp();
-signals:
-
-public slots:
-
 private:
     PrinterController *m_printerControllerInstance;
     VisionWorker *m_visionWorkerInstance;

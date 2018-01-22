@@ -19,12 +19,14 @@ public:
         return instance;
     }
     /******************************/
+
+    QPointF getCharPosition(QChar character);
 private:
     /** Singleton implementation **/
     VisionWorker();
     VisionWorker (VisionWorker const&);
     VisionWorker& operator=(VisionWorker const&);
-    /******************************/
+
 
     QTimer* m_timer;
     cv::VideoCapture capture;
