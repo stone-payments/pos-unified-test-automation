@@ -48,6 +48,10 @@ FORMS += \
 RESOURCES += \
         res/resource.qrc
 
+INCLUDEPATH += \
+        src/actuators \
+        src/vision
+
 # add open CV
 unix {
     CONFIG += link_pkgconfig
