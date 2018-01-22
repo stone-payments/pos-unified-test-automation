@@ -24,23 +24,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        src/main.cpp \
-        src/mainwindow.cpp \
-        src/visionworker.cpp \
-        src/printercontroller.cpp \
-        src/cardcontroller.cpp \
-        src/postesttool.cpp \
-        src/keyboardcontroller.cpp \
-        src/touchcontroller.cpp
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/postesttool.cpp \
+    src/actuators/cardcontroller.cpp \
+    src/actuators/keyboardcontroller.cpp \
+    src/actuators/printercontroller.cpp \
+    src/actuators/touchcontroller.cpp \
+    src/vision/visionworker.cpp
 
 HEADERS += \
-        src/mainwindow.h \
-        src/visionworker.h \
-        src/printercontroller.h \
-        src/cardcontroller.h \
-        src/postesttool.h \
-        src/keyboardcontroller.h \
-        src/touchcontroller.h
+    src/mainwindow.h \
+    src/postesttool.h \
+    src/actuators/cardcontroller.h \
+    src/actuators/keyboardcontroller.h \
+    src/actuators/printercontroller.h \
+    src/actuators/touchcontroller.h \
+    src/vision/visionworker.h
 
 FORMS += \
         ui/mainwindow.ui
