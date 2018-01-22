@@ -11,9 +11,10 @@ class TouchController: public QObject
 public:
     explicit TouchController(QObject *parent = nullptr);
 
-    void move(int dx, int dy);
-    void click(int x, int y);
-    void press(int x, int y);
+    void move(QPointF initialPoint, QPointF finalPoint);
+    void click(QPointF point);
+    void press(QPointF point);
+    void pressAndHold(QPointF point, int millisseconds);
     void release();
 
 private:

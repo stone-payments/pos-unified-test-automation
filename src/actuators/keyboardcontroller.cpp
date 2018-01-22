@@ -23,7 +23,7 @@ void KeyboardController::keyPressAndHold(Qt::Key key, int milliseconds)
     this->keyUp();
 }
 
-void KeyboardController::keyDown(Qt::Key)
+void KeyboardController::keyDown(Qt::Key key)
 {
     QPointF charPosition = m_visionWorkerInstance->getCharPosition(QChar(key));
     m_printerControllerInstance->setXYPosition(charPosition);
