@@ -20,7 +20,6 @@ public:
     ~MainWindow();
 private:
     Ui::MainWindow *ui;
-    QGraphicsScene *m_scene;
     PosTestTool m_posTestTool;
 
 private slots:
