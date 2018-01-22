@@ -17,7 +17,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::updateCameraView(QImage image)
 {
-    ui->cameraView->setPixmap(QPixmap::fromImage(image));
+    ui->cameraRawView->setPixmap(QPixmap::fromImage(image));
+    ui->cameraVisionView_1->setPixmap(QPixmap::fromImage(image));
+    ui->cameraVisionView_2->setPixmap(QPixmap::fromImage(image));
+    ui->cameraVisionView_3->setPixmap(QPixmap::fromImage(image));
 }
 
 void MainWindow::on_buttonMove_clicked()

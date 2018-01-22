@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>403</height>
+    <width>924</width>
+    <height>548</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,11 +16,39 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QLabel" name="cameraView">
-      <property name="text">
-       <string>TextLabel</string>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>20</number>
       </property>
-     </widget>
+      <item row="0" column="0">
+       <widget class="QLabel" name="cameraVisionView_1">
+        <property name="text">
+         <string>ImageLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="cameraRawView">
+        <property name="text">
+         <string>ImageLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="cameraVisionView_2">
+        <property name="text">
+         <string>ImageLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="cameraVisionView_3">
+        <property name="text">
+         <string>ImageLabel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -109,7 +137,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>500</width>
+     <width>924</width>
      <height>25</height>
     </rect>
    </property>
