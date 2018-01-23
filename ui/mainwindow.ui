@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>924</width>
-    <height>548</height>
+    <width>397</width>
+    <height>740</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -78,7 +78,11 @@
             </widget>
            </item>
            <item row="1" column="1">
-            <widget class="QLineEdit" name="dy"/>
+            <widget class="QLineEdit" name="dy">
+             <property name="inputMask">
+              <string>99.9</string>
+             </property>
+            </widget>
            </item>
            <item row="2" column="0">
             <widget class="QLabel" name="label_z">
@@ -88,7 +92,11 @@
             </widget>
            </item>
            <item row="2" column="1">
-            <widget class="QLineEdit" name="dz"/>
+            <widget class="QLineEdit" name="dz">
+             <property name="inputMask">
+              <string>99.9</string>
+             </property>
+            </widget>
            </item>
            <item row="3" column="1">
             <widget class="QPushButton" name="buttonMove">
@@ -98,9 +106,143 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QLineEdit" name="dx"/>
+            <widget class="QLineEdit" name="dx">
+             <property name="inputMask">
+              <string>99.9</string>
+             </property>
+            </widget>
            </item>
           </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string>Keyboar</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QFormLayout" name="formLayout_2">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="inputKey">
+             <property name="inputMask">
+              <string>N</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Key: </string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonKeyPress">
+           <property name="text">
+            <string>PRESS</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonKeyPressAndHold">
+           <property name="text">
+            <string>PRESS and HOLD (2s)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonKeyDown">
+           <property name="text">
+            <string>KEY DOWN</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonKeyUp">
+           <property name="text">
+            <string>KEY UP</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>Touch</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QFormLayout" name="formLayout_3">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>X:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Y:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="inputTouchX">
+             <property name="inputMask">
+              <string>99.9</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="inputTouchY">
+             <property name="inputMask">
+              <string>99.9</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonTouchClick">
+           <property name="text">
+            <string>CLICK</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonTouchPress">
+           <property name="text">
+            <string>PRESS</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonTouchPressAndHold">
+           <property name="text">
+            <string>PRESS and HOLD (2s)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonTouchMove">
+           <property name="text">
+            <string>MOVE</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -137,8 +279,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>924</width>
-     <height>25</height>
+     <width>397</width>
+     <height>20</height>
     </rect>
    </property>
   </widget>

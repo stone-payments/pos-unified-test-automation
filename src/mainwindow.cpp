@@ -41,3 +41,51 @@ void MainWindow::on_buttonRemoveCard_clicked()
 {
     m_posTestTool.removeCard();
 }
+
+void MainWindow::on_buttonKeyPress_clicked()
+{
+    QChar character(ui->inputKey->text()[0].toLatin1());
+    m_keyBoardController.keyPress((Qt::Key)character.unicode());
+}
+
+void MainWindow::on_buttonKeyPressAndHold_clicked()
+{
+    QChar character(ui->inputKey->text()[0].toLatin1());
+    m_keyBoardController.keyPressAndHold((Qt::Key)character.unicode(), 2000);
+}
+
+void MainWindow::on_buttonKeyDown_clicked()
+{
+    QChar character(ui->inputKey->text()[0].toLatin1());
+    m_keyBoardController.keyDown((Qt::Key)character.unicode());
+}
+
+void MainWindow::on_buttonKeyUp_clicked()
+{
+    m_keyBoardController.keyUp();
+}
+
+void MainWindow::on_buttonTouchClick_clicked()
+{
+    QPointF point(ui->inputTouchX->text().toFloat(), ui->inputTouchY->text().toFloat());
+    m_touchController.click(point);
+}
+
+void MainWindow::on_buttonTouchPress_clicked()
+{
+    QPointF point(ui->inputTouchX->text().toFloat(), ui->inputTouchY->text().toFloat());
+    m_touchController.press(point);
+}
+
+void MainWindow::on_buttonTouchPressAndHold_clicked()
+{
+    QPointF point(ui->inputTouchX->text().toFloat(), ui->inputTouchY->text().toFloat());
+    m_touchController.pressAndHold(point, 2000);
+}
+
+void MainWindow::on_buttonTouchMove_clicked()
+{
+    QPointF initialPoint(ui->inputTouchX->text().toFloat(), ui->inputTouchY->text().toFloat());
+    QPointF finalPoint(ui->inputTouchX->text().toFloat(), ui->inputTouchY->text().toFloat());
+    m_touchController.move(initialPoint, finalPoint);
+}
