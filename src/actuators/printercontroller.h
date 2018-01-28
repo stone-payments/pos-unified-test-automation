@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <AtCore/AtCore>
+#include <math.h>
 
 class PrinterController : public QObject
 {
