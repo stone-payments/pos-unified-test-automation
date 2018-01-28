@@ -1,8 +1,9 @@
 #include "postesttool.h"
 
-PosTestTool::PosTestTool(QObject *parent) :
-    QObject(parent)
+
+PosTestTool::PosTestTool(PosModel device)
 {
+    m_posObject = PosObjectBuilder::getPos(device);
     m_printerControllerInstance = &PrinterController::instance();
     m_visionWorkerInstance = &VisionWorker::instance();
 }

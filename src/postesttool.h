@@ -1,27 +1,23 @@
 #ifndef POSTESTTOOL_H
 #define POSTESTTOOL_H
 
-#include <QObject>
 #include "printercontroller.h"
 #include "visionworker.h"
 #include "cardcontroller.h"
 #include "keyboardcontroller.h"
 #include "touchcontroller.h"
+#include "model/posobjectbuilder.h"
 
-class PosTestTool : public QObject
+class PosTestTool
 {
-    Q_OBJECT
 public:
-    explicit PosTestTool(QObject *parent = nullptr);
+    PosTestTool(PosModel device);
 
     void insertCard();
 
     void removeCard();
-signals:
-
-public slots:
-
 private:
+    PosObject *m_posObject;
     CardController m_cardController;
     TouchController m_touchController;
     KeyboardController m_keyboardController;

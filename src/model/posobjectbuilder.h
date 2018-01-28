@@ -6,14 +6,11 @@
 class PosObjectBuilder
 {
 public:
-    enum PosModel {
-        PAX_S920
-    };
-    PosObjectBuilder();
-    PosObject* getPos(PosModel model);
+    static PosObject* getPos(PosModel model);
 
 private:
-    PosObject *parse(QString jsonPath);
+    PosObjectBuilder();
+    static PosObject *parse(QString jsonPath);
 };
 
 #endif // POSOBJECTBUILDER_H

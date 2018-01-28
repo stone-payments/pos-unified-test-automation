@@ -9,7 +9,7 @@ PosObject* PosObjectBuilder::getPos(PosModel model)
 {
     PosObject *newObject = nullptr;
     switch (model) {
-    case PAX_S920:
+    case PosModel::PAX_S920:
         newObject = parse(":/model/PAX_S920.json");
         break;
     default:

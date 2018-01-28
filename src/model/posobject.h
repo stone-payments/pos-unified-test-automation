@@ -8,6 +8,10 @@ struct KeyMap {
     QSet<QString> keyList;
 };
 
+enum PosModel {
+    PAX_S920
+};
+
 class PosObject
 {
 private:

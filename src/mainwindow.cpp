@@ -4,7 +4,8 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    m_posTestTool(new PosTestTool(PosModel::PAX_S920))
 {
     ui->setupUi(this);
     connect(&VisionWorker::instance(), &VisionWorker::imageChanged, this, &MainWindow::updateCameraView);
@@ -34,12 +35,12 @@ void MainWindow::on_buttonMove_clicked()
 
 void MainWindow::on_buttonInsertCard_clicked()
 {
-    m_posTestTool.insertCard();
+    m_posTestTool->insertCard();
 }
 
 void MainWindow::on_buttonRemoveCard_clicked()
 {
-    m_posTestTool.removeCard();
+    m_posTestTool->removeCard();
 }
 
 void MainWindow::on_buttonKeyPress_clicked()
