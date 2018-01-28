@@ -1,7 +1,6 @@
 #ifndef POSOBJECT_H
 #define POSOBJECT_H
 
-#include <QObject>
 #include <QtCore>
 
 struct KeyMap {
@@ -9,11 +8,10 @@ struct KeyMap {
     QList<Qt::Key> key;
 };
 
-class PosObject : public QObject
+class PosObject
 {
-    Q_OBJECT
 private:
-    explicit PosObject(QObject *parent = nullptr);
+    PosObject() { }
 
     QString m_model;
     QString m_vendor;
@@ -22,6 +20,8 @@ private:
     QRect m_keypadROI;
     QRect m_screenROI;
     QList<KeyMap> m_keyboardMap;
+
+    friend class PosObjectBuilder;
 };
 
 #endif // POSOBJECT_H

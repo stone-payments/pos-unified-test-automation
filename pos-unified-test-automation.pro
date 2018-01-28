@@ -32,7 +32,7 @@ SOURCES += \
     src/actuators/printercontroller.cpp \
     src/actuators/touchcontroller.cpp \
     src/vision/visionworker.cpp \
-    src/model/posobject.cpp
+    src/model/posobjectbuilder.cpp
 
 HEADERS += \
     src/mainwindow.h \
@@ -42,7 +42,8 @@ HEADERS += \
     src/actuators/printercontroller.h \
     src/actuators/touchcontroller.h \
     src/vision/visionworker.h \
-    src/model/posobject.h
+    src/model/posobject.h \
+    src/model/posobjectbuilder.h
 
 FORMS += \
     ui/mainwindow.ui
