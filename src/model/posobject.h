@@ -5,7 +5,7 @@
 
 struct KeyMap {
     QPoint position;
-    QList<Qt::Key> key;
+    QSet<QString> keyList;
 };
 
 class PosObject
@@ -15,9 +15,9 @@ private:
 
     QString m_model;
     QString m_vendor;
-    float m_width;
-    float m_height;
-    QRect m_keypadROI;
+    int m_width;
+    int m_height;
+    QRect m_keyboardROI;
     QRect m_screenROI;
     QList<KeyMap> m_keyboardMap;
 
