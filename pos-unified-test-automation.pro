@@ -32,7 +32,8 @@ SOURCES += \
     src/actuators/printercontroller.cpp \
     src/actuators/touchcontroller.cpp \
     src/vision/visionworker.cpp \
-    src/model/posobjectbuilder.cpp
+    src/model/posobjectbuilder.cpp \
+    src/model/posobject.cpp
 
 HEADERS += \
     src/mainwindow.h \
@@ -53,7 +54,8 @@ RESOURCES += \
 
 INCLUDEPATH += \
     src/actuators \
-    src/vision
+    src/vision \
+    src/model
 
 # add open CV
 unix {

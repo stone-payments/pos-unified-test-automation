@@ -20,7 +20,7 @@ public:
     }
     /******************************/
 
-    QPointF getCharPosition(QChar character);
+    QPointF getKeyPosition(QString key);
 private:
     /** Singleton implementation **/
     VisionWorker();

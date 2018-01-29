@@ -46,19 +46,19 @@ void MainWindow::on_buttonRemoveCard_clicked()
 void MainWindow::on_buttonKeyPress_clicked()
 {
     QChar character(ui->inputKey->text()[0].toLatin1());
-    m_keyBoardController.keyPress((Qt::Key)character.unicode());
+    m_keyBoardController.keyPress((QString)character.unicode());
 }
 
 void MainWindow::on_buttonKeyPressAndHold_clicked()
 {
     QChar character(ui->inputKey->text()[0].toLatin1());
-    m_keyBoardController.keyPressAndHold((Qt::Key)character.unicode(), 2000);
+    m_keyBoardController.keyPressAndHold((QString)character.unicode(), 2000);
 }
 
 void MainWindow::on_buttonKeyDown_clicked()
 {
     QChar character(ui->inputKey->text()[0].toLatin1());
-    m_keyBoardController.keyDown((Qt::Key)character.unicode());
+    m_keyBoardController.keyDown((QString)character.unicode());
 }
 
 void MainWindow::on_buttonKeyUp_clicked()

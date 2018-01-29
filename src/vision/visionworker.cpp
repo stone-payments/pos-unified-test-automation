@@ -1,7 +1,7 @@
 #include <QImage>
 #include "visionworker.h"
 
-QPointF VisionWorker::getCharPosition(QChar)
+QPointF VisionWorker::getKeyPosition(QString)
 {
     return QPointF(0,0);
 }

@@ -3,8 +3,10 @@
 
 #include <QObject>
 #include <QKeyEvent>
+
 #include "printercontroller.h"
 #include "visionworker.h"
+#include "posobject.h"
 
 class KeyboardController : public QObject
 {
@@ -12,13 +14,16 @@ class KeyboardController : public QObject
 public:
     explicit KeyboardController(QObject *parent = nullptr);
 
-    void keyPress(Qt::Key key);
-    void keyPressAndHold(Qt::Key key, int milliseconds);
-    void keyDown(Qt::Key);
+    void keyPress(QString key);
+    void keyPressAndHold(QString key, int milliseconds);
+    void keyDown(QString);
     void keyUp();
+
+    void setDevice(PosObject *device);
 private:
     PrinterController *m_printerControllerInstance;
     VisionWorker *m_visionWorkerInstance;
+    PosObject *m_device;
 };
 
 #endif // KEYBOARDCONTROLLER_H

@@ -14,6 +14,8 @@ enum PosModel {
 
 class PosObject
 {
+public:
+    QPoint getKeyPosition(QString desiredKey);
 private:
     PosObject() { }
 
