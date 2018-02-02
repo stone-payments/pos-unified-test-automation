@@ -31,7 +31,9 @@ SOURCES += \
     src/actuators/keyboardcontroller.cpp \
     src/actuators/printercontroller.cpp \
     src/actuators/touchcontroller.cpp \
-    src/vision/visionworker.cpp
+    src/vision/visionworker.cpp \
+    src/model/posobjectbuilder.cpp \
+    src/model/posobject.cpp
 
 HEADERS += \
     src/mainwindow.h \
@@ -40,17 +42,20 @@ HEADERS += \
     src/actuators/keyboardcontroller.h \
     src/actuators/printercontroller.h \
     src/actuators/touchcontroller.h \
-    src/vision/visionworker.h
+    src/vision/visionworker.h \
+    src/model/posobject.h \
+    src/model/posobjectbuilder.h
 
 FORMS += \
-        ui/mainwindow.ui
+    ui/mainwindow.ui
 
 RESOURCES += \
-        res/resource.qrc
+    res/resource.qrc
 
 INCLUDEPATH += \
-        src/actuators \
-        src/vision
+    src/actuators \
+    src/vision \
+    src/model
 
 # add open CV
 unix {
