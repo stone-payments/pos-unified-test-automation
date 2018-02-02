@@ -1,2 +1,10 @@
 build-*
 *.user
+*.o
+Makefile
+moc_*
+buil/
+qrc_*
+ui_*
+.qmake.stash
+pos-unified-test-automation
