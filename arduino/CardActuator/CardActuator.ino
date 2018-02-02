@@ -25,14 +25,16 @@ boolean stringComplete = false;  // whether the string is complete
 
 Servo myservo;  // create servo object to control a servo
 
+const int insertAngle = 25;
+const int removeAngle = 100;
 void setup() 
 {
   // initialize serial:
-  Serial.begin(115200);
+  Serial.begin(9600);
   // reserve 200 bytes for the inputString:
   inputString.reserve(200);
   myservo.attach(3);  // attaches the servo on pin 9 to the servo object
-  myservo.write(180);
+  myservo.write(insertAngle);
 }
 
 void loop() 
@@ -45,12 +47,12 @@ void loop()
     if (inputString == "insert\n")
     {
         Serial.println("Insert card!");
-        myservo.write(0);
+        myservo.write(insertAngle);
     }
     else if (inputString == "remove\n")
     {
         Serial.println("Remove card!");
-        myservo.write(180);
+        myservo.write(removeAngle);
     }
     
     // clear the string:  
