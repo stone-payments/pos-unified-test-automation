@@ -32,6 +32,7 @@ void KeyboardController::keyDown(QString key)
     if(m_device != nullptr)
     {
         charPosition = m_device->getKeyPosition(key);
+        qDebug() << "char position: " << charPosition;
     }
     else
     {

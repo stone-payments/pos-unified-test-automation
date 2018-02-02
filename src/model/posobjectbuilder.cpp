@@ -1,4 +1,5 @@
 #include "posobjectbuilder.h"
+#include <QDebug>
 
 PosObjectBuilder::PosObjectBuilder()
 {
@@ -52,10 +53,12 @@ PosObject *PosObjectBuilder::parse(QString jsonPath)
     QJsonArray keyMapArray = json["keyboardMap"].toArray();
     foreach (QJsonValue keyObject, keyMapArray) {
         KeyMap newKeyMap;
-        newKeyMap.position.setX(keyObject['x'].toInt());
-        newKeyMap.position.setY(keyObject['y'].toInt());
+        qDebug() << "X: " << keyObject["x"].toInt();
+        qDebug() << "Y: " << keyObject["y"].toInt();
+        newKeyMap.position.setX(keyObject["x"].toInt());
+        newKeyMap.position.setY(keyObject["y"].toInt());
 
-        QVariantList keyVariantList = json["keyList"].toArray().toVariantList();
+        QVariantList keyVariantList = keyObject["keyList"].toArray().toVariantList();
         foreach (QVariant keyVariant, keyVariantList) {
             newKeyMap.keyList << keyVariant.toString();
         }

@@ -20,7 +20,6 @@ public:
     ~MainWindow();
 private:
     Ui::MainWindow *ui;
-    KeyboardController m_keyBoardController;
     TouchController m_touchController;
     PosTestTool *m_posTestTool;
 

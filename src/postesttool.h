@@ -16,11 +16,12 @@ public:
     void insertCard();
 
     void removeCard();
+
+    KeyboardController m_keyboardController;
 private:
     PosObject *m_posObject;
     CardController m_cardController;
     TouchController m_touchController;
-    KeyboardController m_keyboardController;
     PrinterController *m_printerControllerInstance;
     VisionWorker *m_visionWorkerInstance;
 };
