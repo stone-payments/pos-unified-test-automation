@@ -5,8 +5,21 @@
 
 PrinterController::PrinterController()
 {
-    core.initSerial("ttyUSB0", 115200); // TODO: Auto detect usb port.
-    core.home();
+    QString serialPort;
+    foreach (const QSerialPortInfo &devinfo, QSerialPortInfo::availablePorts())
+    {
+        qDebug() << "Serial port: " <<devinfo.portName() ;
+        if(devinfo.manufacturer().contains("1a86"))
+        {
+            serialPort = devinfo.portName();
+
+        }
+    }
+
+    if(core.initSerial(serialPort, 115200) == true)
+    {
+        core.home();
+    }
 }
 
 void PrinterController::moveAxis(uint dx, uint dy, uint dz)
