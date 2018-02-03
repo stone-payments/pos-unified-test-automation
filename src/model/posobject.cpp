@@ -1,13 +1,14 @@
 #include "posobject.h"
 
-QPoint PosObject::getKeyPosition(QString desiredKey)
+QPair<QPointF, int> PosObject::getKeyPosition(QString desiredKey)
 {
     foreach (KeyMap key, m_keyboardMap)
     {
         if(key.keyList.contains(desiredKey))
         {
-            return key.position;
+            QPair<QPointF, int> keyPosition(key.position, key.keyList.indexOf(desiredKey));
+            return keyPosition;
         }
     }
-    return QPoint(0,0);
+    return QPair<QPointF, int>(QPointF(0,0), 0);
 }

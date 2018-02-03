@@ -28,7 +28,7 @@ void KeyboardController::keyPressAndHold(QString key, int milliseconds)
 
 void KeyboardController::keyDown(QString key)
 {
-    QPointF charPosition;
+    QPair<QPointF, int> charPosition;
 
     if(m_device != nullptr)
     {
@@ -37,12 +37,15 @@ void KeyboardController::keyDown(QString key)
     }
     else
     {
-        charPosition = m_visionWorkerInstance->getKeyPosition(key);
+        charPosition.first = m_visionWorkerInstance->getKeyPosition(key);
     }
 
-    m_printerControllerInstance->setXYPosition(charPosition);
+    m_printerControllerInstance->setXYPosition(charPosition.first);
 
-    m_printerControllerInstance->moveZ(0);
+    for (int i = 0; i <= charPosition.second; ++i) {
+        m_printerControllerInstance->moveZ(0);
+        this->keyUp();
+    }
 }
 
 void KeyboardController::keyUp()

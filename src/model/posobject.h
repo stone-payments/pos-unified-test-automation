@@ -5,7 +5,7 @@
 
 struct KeyMap {
     QPoint position;
-    QSet<QString> keyList;
+    QStringList keyList;
 };
 
 enum PosModel {
@@ -15,7 +15,7 @@ enum PosModel {
 class PosObject
 {
 public:
-    QPoint getKeyPosition(QString desiredKey);
+    QPair<QPointF, int> getKeyPosition(QString desiredKey);
 private:
     PosObject() { }
 
