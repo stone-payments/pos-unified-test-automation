@@ -26,9 +26,9 @@ void MainWindow::updateCameraView(QImage image)
 
 void MainWindow::on_buttonMove_clicked()
 {
-    uint dx = ui->dx->text().toInt();
-    uint dy = ui->dy->text().toInt();
-    uint dz = ui->dz->text().toInt();
+    float dx = ui->dx->text().toFloat();
+    float dy = ui->dy->text().toFloat();
+    float dz = ui->dz->text().toFloat();
 
     PrinterController::instance().moveAxis(dx, dy, dz);
 }
@@ -89,4 +89,9 @@ void MainWindow::on_buttonTouchMove_clicked()
     QPointF initialPoint(ui->inputTouchX->text().toFloat(), ui->inputTouchY->text().toFloat());
     QPointF finalPoint(ui->inputTouchX->text().toFloat(), ui->inputTouchY->text().toFloat());
     m_touchController.move(initialPoint, finalPoint);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    m_posTestTool->m_keyboardController.write(ui->inputKey->text());
 }

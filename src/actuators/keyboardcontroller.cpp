@@ -12,6 +12,19 @@ KeyboardController::KeyboardController(QObject *parent) :
     m_visionWorkerInstance = &VisionWorker::instance();
 }
 
+void KeyboardController::write(QString phrase)
+{
+    QPair<QPointF, int> lastCharPosition;
+
+    foreach (QChar character, phrase) {
+        QPair<QPointF, int> charPosition = m_device->getKeyPosition(character);
+        if(charPosition.first == lastCharPosition.first)
+            m_printerControllerInstance->wait(2000);
+        keyPress(character);
+        lastCharPosition = charPosition;
+    }
+}
+
 void KeyboardController::keyPress(QString key)
 {
     this->keyUp();
@@ -22,7 +35,7 @@ void KeyboardController::keyPress(QString key)
 void KeyboardController::keyPressAndHold(QString key, int milliseconds)
 {
     this->keyDown(key);
-    std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+    m_printerControllerInstance->wait(milliseconds);
     this->keyUp();
 }
 

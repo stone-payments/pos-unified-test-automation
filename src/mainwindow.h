@@ -36,6 +36,7 @@ private slots:
     void on_buttonTouchPress_clicked();
     void on_buttonTouchPressAndHold_clicked();
     void on_buttonTouchMove_clicked();
+    void on_pushButton_clicked();
 };
 
 #endif // MAINWINDOW_H

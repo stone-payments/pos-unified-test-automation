@@ -9,13 +9,14 @@ class PrinterController : public QObject
 {
     Q_OBJECT
 public:
-    void moveAxis(uint dx, uint dy, uint dz);
+    void moveAxis(float dx, float dy, float dz);
 
     void setXYPosition(QPointF point);
 
     void moveX(float_t dx);
     void moveY(float_t dy);
     void moveZ(float_t dz);
+    void wait(int millisseconds);
 
     /** Singleton implementation **/
     static PrinterController& instance()
@@ -24,6 +25,7 @@ public:
         return instance;
     }
     /******************************/
+
 private:
     /** Singleton implementation **/
     PrinterController();

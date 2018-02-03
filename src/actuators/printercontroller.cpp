@@ -22,14 +22,11 @@ PrinterController::PrinterController()
     }
 }
 
-void PrinterController::moveAxis(uint dx, uint dy, uint dz)
+void PrinterController::moveAxis(float dx, float dy, float dz)
 {
-    qDebug() << "MOVE X: " << dx << "\tY: " << dy << "\tZ: " << dz;
+    // std::count << "MOVE X: " << dx << "\tY: " << dy << "\tZ: " << std::endl;
     core.setRelativePosition();
-    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("X", QString::number(dx))));
-    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("Y", QString::number(dy))));
-    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("Z", QString::number(dz))));
-    core.setAbsolutePosition();
+    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("X%1 Y%2 Z%3").arg(QString::number(dx), QString::number(dy), QString::number(dz))));
 }
 
 void PrinterController::setXYPosition(QPointF point)
@@ -54,6 +51,11 @@ void PrinterController::moveZ(float_t dz)
 {
     core.setAbsolutePosition();
     core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("Z", QString::number(dz))));
+}
+
+void PrinterController::wait(int millisseconds)
+{
+    core.pushCommand(GCode::toCommand(GCode::G4, QStringLiteral("P%1").arg(QString::number(millisseconds))));
 }
 
 void PrinterController::initConnectionToAtCore()

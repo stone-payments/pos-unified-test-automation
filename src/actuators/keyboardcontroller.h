@@ -14,6 +14,7 @@ class KeyboardController : public QObject
 public:
     explicit KeyboardController(QObject *parent = nullptr);
 
+    void write(QString phrase);
     void keyPress(QString key);
     void keyPressAndHold(QString key, int milliseconds);
     void keyDown(QString);
