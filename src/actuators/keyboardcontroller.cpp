@@ -2,7 +2,7 @@
 #include <chrono>
 #include <thread>
 
-const float_t keyZOffset = 1;
+const float_t keyZOffset = 5;
 
 KeyboardController::KeyboardController(QObject *parent) :
     QObject(parent),
@@ -14,6 +14,7 @@ KeyboardController::KeyboardController(QObject *parent) :
 
 void KeyboardController::keyPress(QString key)
 {
+    this->keyUp();
     this->keyDown(key);
     this->keyUp();
 }
@@ -41,12 +42,12 @@ void KeyboardController::keyDown(QString key)
 
     m_printerControllerInstance->setXYPosition(charPosition);
 
-    m_printerControllerInstance->moveZ(keyZOffset);
+    m_printerControllerInstance->moveZ(0);
 }
 
 void KeyboardController::keyUp()
 {
-    m_printerControllerInstance->moveZ(-keyZOffset);
+    m_printerControllerInstance->moveZ(keyZOffset);
 }
 
 void KeyboardController::setDevice(PosObject *device)

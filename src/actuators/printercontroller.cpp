@@ -22,8 +22,7 @@ void PrinterController::moveAxis(uint dx, uint dy, uint dz)
 void PrinterController::setXYPosition(QPointF point)
 {
     core.setAbsolutePosition();
-    core.pushCommand(GCode::toCommand(GCode::G1, QStringLiteral("%1%2").arg("X", QString::number(point.x()))));
-    core.pushCommand(GCode::toCommand(GCode::G1, QStringLiteral("%1%2").arg("Y", QString::number(point.y()))));
+    core.pushCommand(GCode::toCommand(GCode::G1, QStringLiteral("X%1 Y%2").arg(QString::number(point.x()), QString::number(point.y()))));
 }
 
 void PrinterController::moveX(float_t dx)
@@ -40,7 +39,7 @@ void PrinterController::moveY(float_t dy)
 
 void PrinterController::moveZ(float_t dz)
 {
-    core.setRelativePosition();
+    core.setAbsolutePosition();
     core.pushCommand(GCode::toCommand(GCode::G1, QStringLiteral("%1%2").arg("Z", QString::number(dz))));
 }
 
