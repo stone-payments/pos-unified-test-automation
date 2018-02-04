@@ -55,7 +55,7 @@ void PrinterController::moveZ(float_t dz)
 
 void PrinterController::wait(int millisseconds)
 {
-    core.pushCommand(GCode::toCommand(GCode::G4, QStringLiteral("P%1").arg(QString::number(millisseconds))));
+    core.pushCommand(QStringLiteral("G4 P%1").arg(QString::number(millisseconds)));
 }
 
 void PrinterController::initConnectionToAtCore()

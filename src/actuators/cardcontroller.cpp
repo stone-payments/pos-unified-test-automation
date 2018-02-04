@@ -9,7 +9,6 @@ CardController::CardController()
         if(devinfo.description().contains("Arduino"))
         {
             m_serialPort.setPortName(devinfo.portName());
-
         }
     }
 
