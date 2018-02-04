@@ -1,6 +1,4 @@
 #include "touchcontroller.h"
-#include <chrono>
-#include <thread>
 
 const float_t touchZOffset = 1;
 
@@ -26,7 +24,7 @@ void TouchController::click(QPointF point)
 void TouchController::pressAndHold(QPointF point, int milliseconds)
 {
     this->press(point);
-    std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+    m_printerControllerInstance->wait(milliseconds);
     this->release();
 }
 
@@ -41,4 +39,3 @@ void TouchController::release()
 {
     m_printerControllerInstance->moveZ(-touchZOffset);
 }
-

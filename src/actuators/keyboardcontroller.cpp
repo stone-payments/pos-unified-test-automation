@@ -1,6 +1,4 @@
 #include "keyboardcontroller.h"
-#include <chrono>
-#include <thread>
 
 const float_t keyZOffset = 5;
 
