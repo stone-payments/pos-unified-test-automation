@@ -12,7 +12,6 @@ PrinterController::PrinterController()
         if(devinfo.manufacturer().contains("1a86"))
         {
             serialPort = devinfo.portName();
-
         }
     }
 

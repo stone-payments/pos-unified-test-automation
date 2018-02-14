@@ -30,7 +30,7 @@ HEADERS += \
     src/mainwindow.h
 
 FORMS += \
-    ui/mainwindow.ui
+    mainwindow.ui
 
 INCLUDEPATH += $$PWD/../pos-test-tool/src
 LIBS += -L$$PWD/../build/pos-test-tool -lPosTestTool

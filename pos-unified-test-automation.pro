@@ -6,7 +6,6 @@
 
 SUBDIRS = \
     pos-test-tool \
-    pos-test-tool-app \
     pos-test-tool-app
 
 TEMPLATE = subdirs

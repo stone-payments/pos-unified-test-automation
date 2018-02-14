@@ -8,7 +8,7 @@ struct KeyMap {
     QStringList keyList;
 };
 
-enum PosModel {
+enum class PosModel {
     PAX_S920
 };
 
