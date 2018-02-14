@@ -24,6 +24,8 @@ PosTestTool::PosTestTool(PosModel device):
     connect(m_visionWorkerInstance, &VisionWorker::imageChanged, this, [this](QImage newImage){
         emit cameraImageChanged(newImage);
     });
+
+    showScreen();
 }
 
 void PosTestTool::insertCard()
@@ -44,4 +46,10 @@ void PosTestTool::keyPress(QString key)
 void PosTestTool::write(QString text)
 {
     m_keyboardController->write(text);
+}
+
+void PosTestTool::showScreen()
+{
+    m_printerControllerInstance->moveZ(10);
+    m_printerControllerInstance->moveY(180);
 }

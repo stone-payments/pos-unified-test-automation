@@ -26,6 +26,8 @@ public:
 
     void write(QString text);
 
+    void showScreen();
+
 signals:
     void cameraImageChanged(QImage newImage);
 

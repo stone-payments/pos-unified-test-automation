@@ -10,13 +10,13 @@ class PrinterController : public QObject
 {
     Q_OBJECT
 public:
-    void moveAxis(float dx, float dy, float dz);
+    void setXYZPosition(float x, float y, float z);
 
     void setXYPosition(QPointF point);
 
-    void moveX(float_t dx);
-    void moveY(float_t dy);
-    void moveZ(float_t dz);
+    void moveX(float x);
+    void moveY(float y);
+    void moveZ(float z);
     void wait(int millisseconds);
 
     /** Singleton implementation **/

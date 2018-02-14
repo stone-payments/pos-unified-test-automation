@@ -21,11 +21,11 @@ PrinterController::PrinterController()
     }
 }
 
-void PrinterController::moveAxis(float dx, float dy, float dz)
+void PrinterController::setXYZPosition(float x, float y, float z)
 {
     // std::count << "MOVE X: " << dx << "\tY: " << dy << "\tZ: " << std::endl;
-    core.setRelativePosition();
-    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("X%1 Y%2 Z%3").arg(QString::number(dx), QString::number(dy), QString::number(dz))));
+    core.setAbsolutePosition();
+    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("X%1 Y%2 Z%3").arg(QString::number(x), QString::number(y), QString::number(z))));
 }
 
 void PrinterController::setXYPosition(QPointF point)
@@ -34,22 +34,22 @@ void PrinterController::setXYPosition(QPointF point)
     core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("X%1 Y%2").arg(QString::number(point.x()), QString::number(point.y()))));
 }
 
-void PrinterController::moveX(float_t dx)
-{
-    core.setRelativePosition();
-    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("X", QString::number(dx))));
-}
-
-void PrinterController::moveY(float_t dy)
-{
-    core.setRelativePosition();
-    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("Y", QString::number(dy))));
-}
-
-void PrinterController::moveZ(float_t dz)
+void PrinterController::moveX(float x)
 {
     core.setAbsolutePosition();
-    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("Z", QString::number(dz))));
+    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("X", QString::number(x))));
+}
+
+void PrinterController::moveY(float y)
+{
+    core.setAbsolutePosition();
+    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("Y", QString::number(y))));
+}
+
+void PrinterController::moveZ(float z)
+{
+    core.setAbsolutePosition();
+    core.pushCommand(GCode::toCommand(GCode::G0, QStringLiteral("%1%2").arg("Z", QString::number(z))));
 }
 
 void PrinterController::wait(int millisseconds)

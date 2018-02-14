@@ -1,6 +1,6 @@
 #include "keyboardcontroller.h"
 
-const float_t keyZOffset = 5;
+
 
 KeyboardController::KeyboardController(QObject *parent) :
     QObject(parent),
@@ -12,33 +12,22 @@ KeyboardController::KeyboardController(QObject *parent) :
 
 void KeyboardController::write(QString phrase)
 {
+    m_printerControllerInstance->moveZ(10);
     QPair<QPointF, int> lastCharPosition;
 
     foreach (QChar character, phrase) {
         QPair<QPointF, int> charPosition = m_device->getKeyPosition(character);
         if(charPosition.first == lastCharPosition.first)
-            m_printerControllerInstance->wait(2000);
+            m_printerControllerInstance->wait(500);
         keyPress(character);
         lastCharPosition = charPosition;
     }
+    m_printerControllerInstance->moveZ(10);
 }
 
 void KeyboardController::keyPress(QString key)
 {
-    this->keyUp();
-    this->keyDown(key);
-    this->keyUp();
-}
 
-void KeyboardController::keyPressAndHold(QString key, int milliseconds)
-{
-    this->keyDown(key);
-    m_printerControllerInstance->wait(milliseconds);
-    this->keyUp();
-}
-
-void KeyboardController::keyDown(QString key)
-{
     QPair<QPointF, int> charPosition;
 
     if(m_device != nullptr)
@@ -55,13 +44,9 @@ void KeyboardController::keyDown(QString key)
 
     for (int i = 0; i <= charPosition.second; ++i) {
         m_printerControllerInstance->moveZ(0);
-        this->keyUp();
+        m_printerControllerInstance->moveZ(2.5);
     }
-}
-
-void KeyboardController::keyUp()
-{
-    m_printerControllerInstance->moveZ(keyZOffset);
+    m_printerControllerInstance->moveZ(5);
 }
 
 void KeyboardController::setDevice(PosObject *device)

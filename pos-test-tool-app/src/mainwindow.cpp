@@ -31,6 +31,7 @@ void MainWindow::on_buttonKeyboardPress_clicked()
 void MainWindow::on_buttonKeyboardWrite_clicked()
 {
     m_posTestTool->write(ui->inputKeyboard->text());
+    m_posTestTool->showScreen();
 }
 
 void MainWindow::on_buttonCardInsert_clicked()

@@ -1,6 +1,6 @@
 #include "touchcontroller.h"
 
-const float_t touchZOffset = 1;
+const float touchZOffset = 1;
 
 TouchController::TouchController(QObject *parent): QObject(parent)
 {

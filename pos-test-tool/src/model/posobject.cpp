@@ -13,6 +13,8 @@ QPair<QPointF, int> PosObject::getKeyPosition(QString desiredKey)
     return QPair<QPointF, int>(QPointF(0,0), 0);
 }
 
-PosObject::PosObject() {
-    m_positionOffset = QPointF(68,48.5);
+PosObject::PosObject():
+    m_positionOffset(QPointF(68,48.5))
+{
+
 }
