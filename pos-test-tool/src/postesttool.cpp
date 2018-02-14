@@ -1,6 +1,5 @@
 #include "postesttool.h"
 
-
 PosTestTool::PosTestTool(PosModel device)
 {
     m_posObject = PosObjectBuilder::getPos(device);

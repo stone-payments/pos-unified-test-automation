@@ -1,5 +1,4 @@
 #include <QApplication>
-#include "model/posobjectbuilder.h"
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
