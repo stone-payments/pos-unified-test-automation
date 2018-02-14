@@ -7,6 +7,8 @@ PosTestTool::PosTestTool(PosModel device)
     m_printerControllerInstance = &PrinterController::instance();
     m_visionWorkerInstance = &VisionWorker::instance();
     m_keyboardController.setDevice(m_posObject);
+    m_visionWorkerInstance->setDevice(m_posObject);
+    m_visionWorkerInstance->calibrate();
 }
 
 void PosTestTool::insertCard()

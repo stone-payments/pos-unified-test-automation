@@ -4,7 +4,7 @@
 #include <QtCore>
 
 struct KeyMap {
-    QPoint position;
+    QPointF position;
     QStringList keyList;
 };
 
@@ -16,8 +16,9 @@ class PosObject
 {
 public:
     QPair<QPointF, int> getKeyPosition(QString desiredKey);
+
 private:
-    PosObject() { }
+    PosObject();
 
     QString m_model;
     QString m_vendor;
@@ -27,6 +28,7 @@ private:
     QRect m_screenROI;
     QList<KeyMap> m_keyboardMap;
 
+    QPointF m_positionOffset;
     friend class PosObjectBuilder;
 };
 

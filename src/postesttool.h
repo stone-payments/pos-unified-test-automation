@@ -18,8 +18,9 @@ public:
     void removeCard();
 
     KeyboardController m_keyboardController;
-private:
     PosObject *m_posObject;
+private:
+
     CardController m_cardController;
     TouchController m_touchController;
     PrinterController *m_printerControllerInstance;

@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "printercontroller.h"
 #include <QPixmap>
+#include <QPainter>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -21,7 +23,7 @@ void MainWindow::updateCameraView(QImage image)
     ui->cameraRawView->setPixmap(QPixmap::fromImage(image));
     ui->cameraVisionView_1->setPixmap(QPixmap::fromImage(image));
     ui->cameraVisionView_2->setPixmap(QPixmap::fromImage(image));
-    ui->cameraVisionView_3->setPixmap(QPixmap::fromImage(image));
+    ui->cameraVisionView_3->setPixmap(QPixmap::fromImage(VisionWorker::instance().frame_1));
 }
 
 void MainWindow::on_buttonMove_clicked()
@@ -36,6 +38,7 @@ void MainWindow::on_buttonMove_clicked()
 void MainWindow::on_buttonInsertCard_clicked()
 {
     m_posTestTool->insertCard();
+    VisionWorker::instance().getBaseOrigin();
 }
 
 void MainWindow::on_buttonRemoveCard_clicked()
