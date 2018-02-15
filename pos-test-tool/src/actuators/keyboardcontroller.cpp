@@ -44,7 +44,7 @@ void KeyboardController::keyPress(QString key)
 
     for (int i = 0; i <= charPosition.second; ++i) {
         m_printerControllerInstance->moveZ(0);
-        m_printerControllerInstance->moveZ(2.5);
+        m_printerControllerInstance->moveZ(2);
     }
     m_printerControllerInstance->moveZ(5);
 }
