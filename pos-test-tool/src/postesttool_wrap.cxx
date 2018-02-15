@@ -3429,6 +3429,13 @@ SWIG_AsPtr_std_string (PyObject * obj, std::string **val)
 
 
 SWIGINTERNINLINE PyObject*
+  SWIG_From_bool  (bool value)
+{
+  return PyBool_FromLong(value ? 1 : 0);
+}
+
+
+SWIGINTERNINLINE PyObject*
   SWIG_From_int  (int value)
 {
   return PyInt_FromLong((long) value);
@@ -3586,6 +3593,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_PosTestTool_isIdle(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PosTestTool *arg1 = (PosTestTool *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PosTestTool_isIdle",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PosTestTool, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PosTestTool_isIdle" "', argument " "1"" of type '" "PosTestTool *""'"); 
+  }
+  arg1 = reinterpret_cast< PosTestTool * >(argp1);
+  result = (bool)(arg1)->isIdle();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_delete_PosTestTool(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   PosTestTool *arg1 = (PosTestTool *) 0 ;
@@ -3622,6 +3651,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"PosTestTool_keyPress", _wrap_PosTestTool_keyPress, METH_VARARGS, NULL},
 	 { (char *)"PosTestTool_write", _wrap_PosTestTool_write, METH_VARARGS, NULL},
 	 { (char *)"PosTestTool_showScreen", _wrap_PosTestTool_showScreen, METH_VARARGS, NULL},
+	 { (char *)"PosTestTool_isIdle", _wrap_PosTestTool_isIdle, METH_VARARGS, NULL},
 	 { (char *)"delete_PosTestTool", _wrap_delete_PosTestTool, METH_VARARGS, NULL},
 	 { (char *)"PosTestTool_swigregister", PosTestTool_swigregister, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }

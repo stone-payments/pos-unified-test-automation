@@ -23,6 +23,8 @@ public:
     void write(std::string text);
 
     void showScreen();
+
+    bool isIdle();
 };
 
 enum class PosModel {

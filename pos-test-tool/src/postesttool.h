@@ -28,8 +28,14 @@ public:
 
     void showScreen();
 
+    bool isIdle();
+
 signals:
     void cameraImageChanged(QImage newImage);
+
+    void idle();
+
+    void busy();
 
 private:
     KeyboardController *m_keyboardController;
@@ -38,6 +44,8 @@ private:
     PrinterController *m_printerControllerInstance;
     VisionWorker *m_visionWorkerInstance;
     PosObject *m_posObject;
+
+    bool m_isIdle;
 };
 
 #endif // POSTESTTOOL_H

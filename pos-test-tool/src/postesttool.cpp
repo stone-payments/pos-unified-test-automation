@@ -12,7 +12,8 @@
 PosTestTool::PosTestTool(PosModel device):
     m_keyboardController(new KeyboardController),
     m_cardController(new CardController),
-    m_touchController(new TouchController)
+    m_touchController(new TouchController),
+    m_isIdle(false)
 {
     m_posObject = PosObjectBuilder::getPos(device);
     m_printerControllerInstance = &PrinterController::instance();
@@ -21,11 +22,21 @@ PosTestTool::PosTestTool(PosModel device):
     m_visionWorkerInstance->setDevice(m_posObject);
     m_visionWorkerInstance->calibrate();
 
+    showScreen();
+
     connect(m_visionWorkerInstance, &VisionWorker::imageChanged, this, [this](QImage newImage){
         emit cameraImageChanged(newImage);
     });
 
-    showScreen();
+    connect(m_printerControllerInstance, &PrinterController::printerIdle, this, [this](){
+        emit idle();
+        m_isIdle = true;
+    });
+
+    connect(m_printerControllerInstance, &PrinterController::printerBusy, this, [this](){
+        emit busy();
+        m_isIdle = false;
+    });
 }
 
 void PosTestTool::insertCard()
@@ -52,4 +63,9 @@ void PosTestTool::showScreen()
 {
     m_printerControllerInstance->moveZ(10);
     m_printerControllerInstance->moveY(180);
+}
+
+bool PosTestTool::isIdle()
+{
+    return m_isIdle;
 }

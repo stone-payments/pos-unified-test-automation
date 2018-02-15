@@ -27,6 +27,11 @@ public:
     }
     /******************************/
 
+signals:
+    void printerIdle();
+
+    void printerBusy();
+
 private:
     /** Singleton implementation **/
     PrinterController();

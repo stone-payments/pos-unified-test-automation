@@ -126,6 +126,9 @@ class PosTestTool(_object):
 
     def showScreen(self):
         return _postesttool.PosTestTool_showScreen(self)
+
+    def isIdle(self):
+        return _postesttool.PosTestTool_isIdle(self)
     __swig_destroy__ = _postesttool.delete_PosTestTool
     __del__ = lambda self: None
 PosTestTool_swigregister = _postesttool.PosTestTool_swigregister

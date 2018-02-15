@@ -18,6 +18,12 @@ PrinterController::PrinterController()
     if(core.initSerial(serialPort, 115200) == true)
     {
         core.home();
+        connect(&core, &AtCore::stateChanged, this,[this](AtCore::STATES newState) {
+           if(newState == AtCore::BUSY || newState == AtCore::CONNECTING)
+               emit printerBusy();
+           else
+               emit printerIdle();
+        });
     }
 }
 
