@@ -29,8 +29,8 @@ VisionWorker::VisionWorker() :
 
 void VisionWorker::calibrate()
 {
-    // PrinterController::instance().moveZ(10);
-    // PrinterController::instance().setXYPosition(printerVisionPosition);
+//    PrinterController::instance().moveZ(10);
+//    PrinterController::instance().setXYPosition(printerVisionPosition);
 //    updateFrame();
 //    getBaseOrigin();
 //    getPosOrigin();

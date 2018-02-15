@@ -38,14 +38,14 @@ void PosTestTool::removeCard()
     m_cardController->remove();
 }
 
-void PosTestTool::keyPress(QString key)
+void PosTestTool::keyPress(std::string key)
 {
-    m_keyboardController->keyPress(key);
+    m_keyboardController->keyPress(QString::fromStdString(key));
 }
 
-void PosTestTool::write(QString text)
+void PosTestTool::write(std::string text)
 {
-    m_keyboardController->write(text);
+    m_keyboardController->write(QString::fromStdString(text));
 }
 
 void PosTestTool::showScreen()

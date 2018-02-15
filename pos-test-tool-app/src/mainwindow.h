@@ -24,11 +24,6 @@ private:
 
 private slots:
     void updateCameraView(QImage);
-//    void on_buttonInsertCard_clicked();
-//    void on_buttonRemoveCard_clicked();
-//    void on_buttonKeyPress_clicked();
-//    void on_buttonWrite_clicked();
-//    void on_pushButton_clicked();
     void on_buttonKeyboardPress_clicked();
     void on_buttonKeyboardWrite_clicked();
     void on_buttonCardInsert_clicked();

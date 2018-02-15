@@ -6,8 +6,10 @@
 
 QT       += core serialport
 
-TARGET = PosTestTool
+QMAKE_LFLAGS += -fPIC
+
 TEMPLATE = lib
+TARGET = PosTestTool
 
 DEFINES += POSTESTTOOL_LIBRARY
 
@@ -68,3 +70,17 @@ unix {
 # add AtCore
 INCLUDEPATH += /usr/include/AtCore
 LIBS += -L/usr/lib -lAtCore
+
+python_wrapper {
+    TARGET = _postesttool
+    CONFIG += plugin no_plugin_name_prefix
+
+    QMAKE_EXTENSION_SHLIB = so
+
+    # add python to generate Wrapper
+    INCLUDEPATH += /usr/include/python3.6
+
+    SOURCES += \
+        src/postesttool_wrap.cxx
+}
+

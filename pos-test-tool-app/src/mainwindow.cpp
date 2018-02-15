@@ -25,12 +25,12 @@ void MainWindow::updateCameraView(QImage image)
 
 void MainWindow::on_buttonKeyboardPress_clicked()
 {
-    m_posTestTool->keyPress(ui->inputKeyboard->text());
+    m_posTestTool->keyPress(ui->inputKeyboard->text().toStdString());
 }
 
 void MainWindow::on_buttonKeyboardWrite_clicked()
 {
-    m_posTestTool->write(ui->inputKeyboard->text());
+    m_posTestTool->write(ui->inputKeyboard->text().toStdString());
     m_posTestTool->showScreen();
 }
 

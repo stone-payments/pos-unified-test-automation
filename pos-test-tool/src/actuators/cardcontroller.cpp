@@ -2,7 +2,8 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QDebug>
 
-CardController::CardController()
+CardController::CardController(QObject *parent) :
+    QObject(parent)
 {
     foreach (const QSerialPortInfo &devinfo, QSerialPortInfo::availablePorts())
     {

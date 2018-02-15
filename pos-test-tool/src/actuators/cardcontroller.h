@@ -4,10 +4,11 @@
 #include <QObject>
 #include <QSerialPort>
 
-class CardController
+class CardController : public QObject
 {
+    Q_OBJECT
 public:
-    CardController();
+    explicit CardController(QObject *parent = nullptr);
     ~CardController();
     void insert();
     void remove();

@@ -1,7 +1,7 @@
 #ifndef POSTESTTOOL_H
 #define POSTESTTOOL_H
 
-#include "pos-test-tool_global.h"
+#include <QObject>
 #include <QImage>
 
 class KeyboardController;
@@ -12,7 +12,7 @@ class VisionWorker;
 class PosObject;
 enum class PosModel;
 
-class POSTESTTOOLSHARED_EXPORT PosTestTool: public QObject
+class PosTestTool: public QObject
 {
     Q_OBJECT
 public:
@@ -22,9 +22,9 @@ public:
 
     void removeCard();
 
-    void keyPress(QString key);
+    void keyPress(std::string key);
 
-    void write(QString text);
+    void write(std::string text);
 
     void showScreen();
 
