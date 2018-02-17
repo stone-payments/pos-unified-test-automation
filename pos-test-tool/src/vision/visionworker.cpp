@@ -21,8 +21,8 @@ VisionWorker::VisionWorker() :
     m_timer(new QTimer(this))
 {
     // Default webcam
-    capture.open(0);
-    m_timer->start(100); // 60fps
+//    capture.open(0);
+//    m_timer->start(100); // 60fps
 
     connect(m_timer, &QTimer::timeout, this, &VisionWorker::updateFrame);
 }
