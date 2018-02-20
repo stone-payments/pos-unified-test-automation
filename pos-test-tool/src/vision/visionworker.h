@@ -5,7 +5,7 @@
 #include <QTimer>
 #include <QImage>
 
-#include <opencv2/opencv.hpp>
+//#include <opencv2/opencv.hpp>
 #include "printercontroller.h"
 #include "posobject.h"
 
@@ -37,8 +37,8 @@ private:
     VisionWorker& operator=(VisionWorker const&);
 
     QTimer* m_timer;
-    cv::VideoCapture capture;
-    cv::Mat m_lastFrame;
+//    cv::VideoCapture capture;
+//    cv::Mat m_lastFrame;
 
     const QPoint printerVisionPosition = QPoint(50, 210);
     QPoint m_baseOrigin;

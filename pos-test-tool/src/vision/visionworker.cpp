@@ -2,8 +2,8 @@
 #include "visionworker.h"
 #include "printercontroller.h"
 
-#include "opencv2/imgproc.hpp"
-#include "opencv2/highgui.hpp"
+//#include "opencv2/imgproc.hpp"
+//#include "opencv2/highgui.hpp"
 #include <iostream>
 #include <stdlib.h>
 
@@ -92,15 +92,15 @@ void VisionWorker::setDevice(PosObject *device)
 
 void VisionWorker::updateFrame()
 {
-    capture >> m_lastFrame;
-    getBaseOrigin();
+//    capture >> m_lastFrame;
+//    getBaseOrigin();
 
-    cv::Mat frameRgb;
-    // Convert cv::Mat to QImage so we can display it in graphics view
-    cv::cvtColor(m_lastFrame, frameRgb,CV_BGR2RGB);
-    QImage image((const uchar *) frameRgb.data, frameRgb.cols, frameRgb.rows, frameRgb.step, QImage::Format_RGB888);
+//    cv::Mat frameRgb;
+//    // Convert cv::Mat to QImage so we can display it in graphics view
+//    cv::cvtColor(m_lastFrame, frameRgb,CV_BGR2RGB);
+//    QImage image((const uchar *) frameRgb.data, frameRgb.cols, frameRgb.rows, frameRgb.step, QImage::Format_RGB888);
 
-    //getBaseOrigin();
-    emit imageChanged(image);
+//    //getBaseOrigin();
+//    emit imageChanged(image);
 }
 

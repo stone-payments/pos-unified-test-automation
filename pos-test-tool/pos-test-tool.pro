@@ -61,11 +61,11 @@ INCLUDEPATH += \
     src/vision \
     src/model
 
-# add open CV
-unix {
-    CONFIG += link_pkgconfig
-    PKGCONFIG += opencv
-}
+## add open CV
+#unix {
+#    CONFIG += link_pkgconfig
+#    PKGCONFIG += opencv
+#}
 
 # add AtCore
 INCLUDEPATH += /usr/include/AtCore
