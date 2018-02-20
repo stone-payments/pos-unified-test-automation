@@ -51,7 +51,8 @@ PosObject *PosObjectBuilder::parse(QString jsonPath)
     object->m_screenROI.setHeight(screenObject["h"].toInt());
 
     QJsonArray keyMapArray = json["keyboardMap"].toArray();
-    foreach (QJsonValue keyObject, keyMapArray) {
+    foreach (QJsonValue keyValue, keyMapArray) {
+        QJsonObject keyObject = keyValue.toObject();
         KeyMap newKeyMap;
         qDebug() << "X: " << keyObject["x"].toInt();
         qDebug() << "Y: " << keyObject["y"].toInt();
