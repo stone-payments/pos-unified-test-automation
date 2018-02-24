@@ -1,31 +1,28 @@
 #ifndef KEYBOARDCONTROLLER_H
 #define KEYBOARDCONTROLLER_H
 
-#include <QObject>
 #include <QKeyEvent>
+#include <QObject>
 
-#include "printercontroller.h"
-#include "visionworker.h"
 #include "posobject.h"
+#include "printercontroller.h"
 
+class KeyboardController : public QObject {
+  Q_OBJECT
+ public:
+  explicit KeyboardController(QObject *parent = nullptr);
 
-class KeyboardController : public QObject
-{
-    Q_OBJECT
-public:
-    explicit KeyboardController(QObject *parent = nullptr);
+  void write(QString phrase);
 
-    void write(QString phrase);
+  void keyPress(QString key);
 
-    void keyPress(QString key);
+  void setDevice(PosObject *device);
 
-    void setDevice(PosObject *device);
-private:
-    PrinterController *m_printerControllerInstance;
-    VisionWorker *m_visionWorkerInstance;
-    PosObject *m_device;
+ private:
+  PrinterController *m_printerControllerInstance;
+  PosObject *m_device;
 
-    const int m_safeZPosition = 5;
+  const int m_safeZPosition = 5;
 };
 
-#endif // KEYBOARDCONTROLLER_H
+#endif  // KEYBOARDCONTROLLER_H

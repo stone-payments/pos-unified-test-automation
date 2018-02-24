@@ -28,20 +28,16 @@ SOURCES += \
     src/actuators/cardcontroller.cpp \
     src/actuators/keyboardcontroller.cpp \
     src/actuators/printercontroller.cpp \
-    src/actuators/touchcontroller.cpp \
     src/model/posobject.cpp \
     src/model/posobjectbuilder.cpp \
-    src/vision/visionworker.cpp \
     src/postesttool.cpp
 
 HEADERS += \
     src/actuators/cardcontroller.h \
     src/actuators/keyboardcontroller.h \
     src/actuators/printercontroller.h \
-    src/actuators/touchcontroller.h \
     src/model/posobject.h \
     src/model/posobjectbuilder.h \
-    src/vision/visionworker.h \
     src/pos-test-tool_global.h \
     src/postesttool.h
 
@@ -61,14 +57,7 @@ RESOURCES += \
 
 INCLUDEPATH += \
     src/actuators \
-    src/vision \
     src/model
-
-## add open CV
-#unix {
-#    CONFIG += link_pkgconfig
-#    PKGCONFIG += opencv
-#}
 
 # add AtCore
 INCLUDEPATH += /usr/include/AtCore

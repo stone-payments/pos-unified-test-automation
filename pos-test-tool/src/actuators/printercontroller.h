@@ -4,7 +4,6 @@
 #include <math.h>
 #include <AtCore/AtCore>
 #include <QObject>
-#include "visionworker.h"
 
 class PrinterController : public QObject {
   Q_OBJECT
