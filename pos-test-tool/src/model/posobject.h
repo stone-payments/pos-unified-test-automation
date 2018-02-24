@@ -27,7 +27,7 @@ private:
     QRect m_screenROI;
     QList<KeyMap> m_keyboardMap;
 
-    QPointF m_positionOffset;
+    QPointF m_originPosition;
     friend class PosObjectBuilder;
 };
 

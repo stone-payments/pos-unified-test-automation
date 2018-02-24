@@ -1,13 +1,13 @@
 {
-    "vendor": "PAX",
-    "model": "S920",
-    "width": 77,
-    "height": 165,
-    "keyboardMap": [
+    "vendor": "PAX", /* fabricante */
+    "model": "S920", /* modelo */
+    "width": 77,     /* largura em mm */
+    "height": 165,   /* altura em mm */
+    "keyboardMap": [ /* lista de teclas */
         {
-            "x": 15,
-            "y": 36,
-            "keyList": ["1", "q", "z", "."]
+            "x": 15,                            /* posisao x em mm com relação à origem */
+            "y": 36,                            /* posisao y em mm com relação à origem */
+            "keyList": ["1", "q", "z", "."]     /* lista de caracteres */
         },
         {
             "x": 30,

@@ -8,15 +8,20 @@
 #include <QObject>
 
 PosTestTool::PosTestTool(PosModel device)
-    : m_keyboardController(new KeyboardController)
-    , m_cardController(new CardController)
+    : m_keyboardController(new KeyboardController(this))
+    , m_cardController(new CardController(this))
+    , m_printerController(new PrinterController(this))
 {
-
     m_posObject = PosObjectBuilder::getPosObject(device);
-    m_printerControllerInstance = &PrinterController::instance();
     m_keyboardController->setDevice(m_posObject);
+    m_keyboardController->setPrinterController(m_printerController);
 
     showScreen();
+}
+
+PosTestTool::~PosTestTool()
+{
+    delete m_posObject;
 }
 
 void PosTestTool::insertCard()
@@ -41,6 +46,6 @@ void PosTestTool::write(std::string text)
 
 void PosTestTool::showScreen()
 {
-    m_printerControllerInstance->moveZ(10);
-    m_printerControllerInstance->moveY(180);
+    m_printerController->moveZ(PrinterController::safeZPosition);
+    m_printerController->moveY(180);
 }

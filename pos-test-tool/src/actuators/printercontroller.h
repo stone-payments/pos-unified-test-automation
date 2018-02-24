@@ -8,6 +8,8 @@
 class PrinterController : public QObject {
     Q_OBJECT
 public:
+    explicit PrinterController(QObject* parent = nullptr);
+    ~PrinterController();
     void setXYZPosition(qreal x, qreal y, qreal z);
 
     void setXYPosition(QPointF point);
@@ -17,17 +19,10 @@ public:
     void moveZ(qreal z);
     void wait(int millisseconds);
 
-    /** Singleton implementation **/
-    static PrinterController& instance()
-    {
-        static PrinterController instance;
-        return instance;
-    }
-    /******************************/
+    static const int safeZPosition = 5;
 
 private:
     /** Singleton implementation **/
-    PrinterController();
     PrinterController(PrinterController const&);
     PrinterController& operator=(PrinterController const&);
     /******************************/

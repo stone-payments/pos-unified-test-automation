@@ -14,11 +14,11 @@ public:
     void write(QString phrase);
     void keyPress(QString key);
     void setDevice(PosObject* device);
+    void setPrinterController(PrinterController* PrinterController);
 
 private:
     PosObject* m_device;
-    PrinterController* m_printerControllerInstance;
-    const int m_safeZPosition = 5;
+    PrinterController* m_printerController;
 };
 
 #endif // KEYBOARDCONTROLLER_H

@@ -4,7 +4,8 @@
 #include <QDebug>
 #include <QtSerialPort>
 
-PrinterController::PrinterController()
+PrinterController::PrinterController(QObject* parent)
+    : QObject(parent)
 {
     QString serialPort;
     foreach (const QSerialPortInfo& devinfo, QSerialPortInfo::availablePorts()) {

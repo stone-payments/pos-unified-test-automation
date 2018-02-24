@@ -49,8 +49,8 @@
                          </base-DElement>
                          <object>{c1698e26-4d08-42a1-8b12-59c158aecf4e}</object>
                          <name>PosTestTool</name>
-                         <pos>x:130;y:230</pos>
-                         <rect>x:-70;y:-45;w:140;h:90</rect>
+                         <pos>x:130;y:55</pos>
+                         <rect>x:-70;y:-55;w:140;h:110</rect>
                          <auto-sized>false</auto-sized>
                          <visual-role>0</visual-role>
                          <visual-role2>4</visual-role2>
@@ -282,9 +282,34 @@
                       </DAssociation>
                      </instance>
                     </item>
+                    <item>
+                     <instance type="DAssociation">
+                      <DAssociation>
+                       <base-DRelation>
+                        <DRelation>
+                         <base-DElement>
+                          <DElement>
+                           <uid>{8dedb8af-a10b-4694-8cba-c40960b9186e}</uid>
+                          </DElement>
+                         </base-DElement>
+                         <object>{08fe5db0-00a1-490d-b9f1-19123f738f23}</object>
+                         <a>{46dacb29-56cd-4ea2-b3cb-05d5f985ee5a}</a>
+                         <b>{51a371ad-7eba-4970-a363-1b9533d8c48e}</b>
+                        </DRelation>
+                       </base-DRelation>
+                       <a>
+                        <DAssociationEnd>
+                         <cradinality>1</cradinality>
+                         <navigable>true</navigable>
+                         <kind>2</kind>
+                        </DAssociationEnd>
+                       </a>
+                      </DAssociation>
+                     </instance>
+                    </item>
                    </qlist>
                   </elements>
-                  <last-modified>1519425193937</last-modified>
+                  <last-modified>1519439603897</last-modified>
                   <toolbarid>General</toolbarid>
                  </MDiagram>
                 </base-MDiagram>
@@ -542,6 +567,35 @@
                         </target>
                        </handle>
                       </item>
+                      <item>
+                       <handle>
+                        <uid>{08fe5db0-00a1-490d-b9f1-19123f738f23}</uid>
+                        <target>
+                         <instance type="MAssociation">
+                          <MAssociation>
+                           <base-MRelation>
+                            <MRelation>
+                             <base-MElement>
+                              <MElement>
+                               <uid>{08fe5db0-00a1-490d-b9f1-19123f738f23}</uid>
+                              </MElement>
+                             </base-MElement>
+                             <a>{c1698e26-4d08-42a1-8b12-59c158aecf4e}</a>
+                             <b>{fccc7d1d-2c8d-437b-a870-c3b6e937a3f8}</b>
+                            </MRelation>
+                           </base-MRelation>
+                           <a>
+                            <MAssociationEnd>
+                             <cardinality>1</cardinality>
+                             <navigable>true</navigable>
+                             <kind>2</kind>
+                            </MAssociationEnd>
+                           </a>
+                          </MAssociation>
+                         </instance>
+                        </target>
+                       </handle>
+                      </item>
                      </qlist>
                     </handles>
                    </handles>
@@ -552,14 +606,28 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{f2d7e744-c605-4ccb-acbd-8a1733236352}</uid>
+                    <uid>{11841c67-2274-454f-bc54-39e385576bd7}</uid>
+                    <type>2</type>
+                    <declaration>+ insertCard()</declaration>
+                   </MClassMember>
+                  </item>
+                  <item>
+                   <MClassMember>
+                    <uid>{a3d3344c-11b9-4709-bdd8-7a26acc8efb1}</uid>
+                    <type>2</type>
+                    <declaration>+ removeCard()</declaration>
+                   </MClassMember>
+                  </item>
+                  <item>
+                   <MClassMember>
+                    <uid>{999111b4-9f8a-4bdf-9ebe-721511a7d21e}</uid>
                     <type>2</type>
                     <declaration>+ write()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{bb168fb0-b7ee-4eba-82b6-e2182672a9db}</uid>
+                    <uid>{87edaaeb-4e7b-47c3-8373-06eab99b890e}</uid>
                     <type>2</type>
                     <declaration>+ keyPress()</declaration>
                    </MClassMember>
@@ -794,21 +862,21 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{deb922a3-bfba-41db-8a35-463c694945f0}</uid>
+                    <uid>{1b092955-0e04-47a1-98c7-3deeb8712dbd}</uid>
                     <type>2</type>
                     <declaration>+ write()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{9368cdec-fc4e-4827-8502-c307d4682b42}</uid>
+                    <uid>{a4cf8eb1-f365-4fb1-9ee6-a155b5129a0e}</uid>
                     <type>2</type>
                     <declaration>+ keyPress()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{680c2308-a51b-4565-b521-c5d17bce698e}</uid>
+                    <uid>{8713076d-7023-4109-baca-e5601e304aad}</uid>
                     <type>2</type>
                     <declaration>+ setDevice()</declaration>
                    </MClassMember>
@@ -1002,14 +1070,14 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{efcdea23-4101-4fc3-8998-e0ff6630d226}</uid>
+                    <uid>{f229c3db-1377-41dd-95dc-fd2ba3f4240e}</uid>
                     <type>2</type>
-                    <declaration>+ getPos()</declaration>
+                    <declaration>+ getPosObject()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{4156d342-de73-4191-8a35-648e7780a7dc}</uid>
+                    <uid>{22585b08-5a83-4502-a32f-260723e0374d}</uid>
                     <type>2</type>
                     <declaration>-  parse()</declaration>
                    </MClassMember>
@@ -1041,14 +1109,14 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{e06e6045-7908-4ba5-84e4-0b99427e34f5}</uid>
+                    <uid>{f598c114-acb3-4c49-9fa3-fba18b78ab81}</uid>
                     <type>2</type>
                     <declaration>+ insert()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{a9897a7d-ffc0-49dd-bb52-3fb1e9ed6705}</uid>
+                    <uid>{04cf2c8e-1424-4ce9-9c7f-10588cc9716e}</uid>
                     <type>2</type>
                     <declaration>+ remove()</declaration>
                    </MClassMember>

@@ -14,6 +14,7 @@ class PosTestTool : public QObject {
     Q_OBJECT
 public:
     PosTestTool(PosModel device);
+    ~PosTestTool();
 
     void insertCard();
 
@@ -28,7 +29,7 @@ public:
 private:
     KeyboardController* m_keyboardController;
     CardController* m_cardController;
-    PrinterController* m_printerControllerInstance;
+    PrinterController* m_printerController;
     PosObject* m_posObject;
 };
 
