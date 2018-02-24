@@ -1,46 +1,43 @@
 #ifndef PRINTERCONTROLLER_H
 #define PRINTERCONTROLLER_H
 
-#include <QObject>
-#include <AtCore/AtCore>
 #include <math.h>
+#include <AtCore/AtCore>
+#include <QObject>
 #include "visionworker.h"
 
-class PrinterController : public QObject
-{
-    Q_OBJECT
-public:
-    void setXYZPosition(float x, float y, float z);
+class PrinterController : public QObject {
+  Q_OBJECT
+ public:
+  void setXYZPosition(qreal x, qreal y, qreal z);
 
-    void setXYPosition(QPointF point);
+  void setXYPosition(QPointF point);
 
-    void moveX(float x);
-    void moveY(float y);
-    void moveZ(float z);
-    void wait(int millisseconds);
+  void moveX(qreal x);
+  void moveY(qreal y);
+  void moveZ(qreal z);
+  void wait(int millisseconds);
 
-    /** Singleton implementation **/
-    static PrinterController& instance()
-    {
-        static PrinterController instance;
-        return instance;
-    }
-    /******************************/
+  /** Singleton implementation **/
+  static PrinterController& instance() {
+    static PrinterController instance;
+    return instance;
+  }
+  /******************************/
 
-signals:
-    void printerIdle();
+ signals:
+  void printerIdle();
 
-    void printerBusy();
+  void printerBusy();
 
-private:
-    /** Singleton implementation **/
-    PrinterController();
-    PrinterController (PrinterController const&);
-    PrinterController& operator=(PrinterController const&);
-    /******************************/
+ private:
+  /** Singleton implementation **/
+  PrinterController();
+  PrinterController(PrinterController const&);
+  PrinterController& operator=(PrinterController const&);
+  /******************************/
 
-    AtCore core;
-    void initConnectionToAtCore();
+  AtCore core;
 };
 
-#endif // PRINTERCONTROLLER_H
+#endif  // PRINTERCONTROLLER_H

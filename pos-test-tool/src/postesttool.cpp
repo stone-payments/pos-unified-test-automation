@@ -12,10 +12,9 @@
 PosTestTool::PosTestTool(PosModel device):
     m_keyboardController(new KeyboardController),
     m_cardController(new CardController),
-    m_touchController(new TouchController),
-    m_isIdle(false)
+    m_touchController(new TouchController),m_isIdle(false)
 {
-    m_posObject = PosObjectBuilder::getPos(device);
+    m_posObject = PosObjectBuilder::getPosObject(device);
     m_printerControllerInstance = &PrinterController::instance();
     m_visionWorkerInstance = &VisionWorker::instance();
     m_keyboardController->setDevice(m_posObject);

@@ -6,7 +6,7 @@
 class PosObjectBuilder
 {
 public:
-    static PosObject* getPos(PosModel model);
+    static PosObject* getPosObject(PosModel model);
 
 private:
     PosObjectBuilder();

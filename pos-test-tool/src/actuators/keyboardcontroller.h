@@ -24,6 +24,8 @@ private:
     PrinterController *m_printerControllerInstance;
     VisionWorker *m_visionWorkerInstance;
     PosObject *m_device;
+
+    const int m_safeZPosition = 5;
 };
 
 #endif // KEYBOARDCONTROLLER_H

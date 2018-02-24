@@ -1,7 +1,5 @@
 #include "keyboardcontroller.h"
 
-
-
 KeyboardController::KeyboardController(QObject *parent) :
     QObject(parent),
     m_device(nullptr)
@@ -12,7 +10,7 @@ KeyboardController::KeyboardController(QObject *parent) :
 
 void KeyboardController::write(QString phrase)
 {
-    m_printerControllerInstance->moveZ(10);
+    m_printerControllerInstance->moveZ(m_safeZPosition);
     QPair<QPointF, int> lastCharPosition;
 
     foreach (QChar character, phrase) {
@@ -22,7 +20,7 @@ void KeyboardController::write(QString phrase)
         keyPress(character);
         lastCharPosition = charPosition;
     }
-    m_printerControllerInstance->moveZ(10);
+    m_printerControllerInstance->moveZ(m_safeZPosition);
 }
 
 void KeyboardController::keyPress(QString key)
@@ -44,9 +42,9 @@ void KeyboardController::keyPress(QString key)
 
     for (int i = 0; i <= charPosition.second; ++i) {
         m_printerControllerInstance->moveZ(0);
-        m_printerControllerInstance->moveZ(2);
+        m_printerControllerInstance->moveZ(m_safeZPosition/2);
     }
-    m_printerControllerInstance->moveZ(5);
+    m_printerControllerInstance->moveZ(m_safeZPosition);
 }
 
 void KeyboardController::setDevice(PosObject *device)

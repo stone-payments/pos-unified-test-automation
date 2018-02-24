@@ -51,7 +51,10 @@ unix {
 }
 
 DISTFILES += \
-    res/model/PAX_S920.json
+    res/model/PAX_S920.json \
+    classdiagram.qmodel \
+    components.qmodel \
+    sequentialcardcontroller.qmodel
 
 RESOURCES += \
     res/resource.qrc

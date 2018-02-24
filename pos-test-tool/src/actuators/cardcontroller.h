@@ -16,5 +16,6 @@ private:
     QSerialPort m_serialPort;
 };
 
-
 #endif // CARDCONTROLLER_H
+
+
