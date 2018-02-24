@@ -12,8 +12,7 @@ enum class PosModel {
     PAX_S920
 };
 
-class PosObject
-{
+class PosObject {
 public:
     QPair<QPointF, int> getKeyPosition(QString desiredKey);
 
