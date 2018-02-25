@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
 #include <QGraphicsScene>
+#include <QMainWindow>
 #include <QTimer>
 
 #include "postesttool.h"
@@ -11,19 +11,18 @@ namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget* parent = 0);
     ~MainWindow();
+
 private:
-    Ui::MainWindow *ui;
-    PosTestTool *m_posTestTool;
+    Ui::MainWindow* ui;
+    PosTestTool* m_posTestTool;
 
 private slots:
-    void updateCameraView(QImage);
     void on_buttonKeyboardPress_clicked();
     void on_buttonKeyboardWrite_clicked();
     void on_buttonCardInsert_clicked();

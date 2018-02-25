@@ -38,6 +38,7 @@ HEADERS += \
     src/actuators/printercontroller.h \
     src/model/posobject.h \
     src/model/posobjectbuilder.h \
+    src/model/pos_types.h \
     src/pos-test-tool_global.h \
     src/postesttool.h
 
@@ -50,7 +51,8 @@ DISTFILES += \
     res/model/PAX_S920.json \
     classdiagram.qmodel \
     components.qmodel \
-    sequentialcardcontroller.qmodel
+    sequentialcardcontroller.qmodel \
+    src/paymentTest.py
 
 RESOURCES += \
     res/resource.qrc

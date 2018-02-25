@@ -8,10 +8,6 @@ struct KeyMap {
     QStringList keyList;
 };
 
-enum class PosModel {
-    PAX_S920
-};
-
 class PosObject {
 public:
     QPair<QPointF, int> getKeyPosition(QString desiredKey);

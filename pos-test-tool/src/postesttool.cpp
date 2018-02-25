@@ -16,7 +16,7 @@ PosTestTool::PosTestTool(PosModel device)
     m_keyboardController->setDevice(m_posObject);
     m_keyboardController->setPrinterController(m_printerController);
 
-    showScreen();
+    this->showScreen();
 }
 
 PosTestTool::~PosTestTool()

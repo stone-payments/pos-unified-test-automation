@@ -22,11 +22,6 @@ public:
     static const int safeZPosition = 5;
 
 private:
-    /** Singleton implementation **/
-    PrinterController(PrinterController const&);
-    PrinterController& operator=(PrinterController const&);
-    /******************************/
-
     AtCore core;
 };
 

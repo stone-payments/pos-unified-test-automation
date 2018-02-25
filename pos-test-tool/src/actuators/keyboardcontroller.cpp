@@ -9,6 +9,11 @@ KeyboardController::KeyboardController(QObject* parent)
 
 void KeyboardController::write(QString phrase)
 {
+    if (m_device == nullptr || m_printerController == nullptr) {
+        qCritical() << "Device or printer not set up";
+        return;
+    }
+
     m_printerController->moveZ(PrinterController::safeZPosition);
     QPair<QPointF, int> lastCharPosition;
 
@@ -25,9 +30,19 @@ void KeyboardController::write(QString phrase)
 
 void KeyboardController::keyPress(QString key)
 {
+    if (m_device == nullptr || m_printerController == nullptr) {
+        qCritical() << "Device or printer not set up";
+        return;
+    }
+
     QPair<QPointF, int> charPosition;
     charPosition = m_device->getKeyPosition(key);
     qDebug() << "char position: " << charPosition;
+
+    if (charPosition.first == QPointF(0, 0)) {
+        qCritical() << "charactere not found";
+        return;
+    }
 
     m_printerController->setXYPosition(charPosition.first);
 

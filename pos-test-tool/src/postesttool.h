@@ -1,14 +1,13 @@
 #ifndef POSTESTTOOL_H
 #define POSTESTTOOL_H
 
-#include <QImage>
+#include "model/pos_types.h"
 #include <QObject>
 
 class KeyboardController;
 class CardController;
 class PrinterController;
 class PosObject;
-enum class PosModel;
 
 class PosTestTool : public QObject {
     Q_OBJECT

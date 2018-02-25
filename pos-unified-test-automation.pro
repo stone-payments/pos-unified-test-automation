@@ -6,6 +6,7 @@
 
 SUBDIRS = \
     pos-test-tool \
-    pos-test-tool-app
+    pos-test-tool-app \
+    write-example
 
 TEMPLATE = subdirs

@@ -38,6 +38,3 @@ LIBS += -L$$PWD/../build/pos-test-tool -lPosTestTool
 # add AtCore
 INCLUDEPATH += /usr/include/AtCore
 LIBS += -L/usr/lib -lAtCore
-
-# add python to generate Wrapper
-INCLUDEPATH += /usr/include/python3.6

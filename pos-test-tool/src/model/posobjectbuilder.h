@@ -1,6 +1,7 @@
 #ifndef POSOBJECTBUILDER_H
 #define POSOBJECTBUILDER_H
 
+#include "pos_types.h"
 #include "posobject.h"
 
 class PosObjectBuilder {

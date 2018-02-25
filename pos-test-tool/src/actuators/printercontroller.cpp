@@ -20,6 +20,11 @@ PrinterController::PrinterController(QObject* parent)
     }
 }
 
+PrinterController::~PrinterController()
+{
+    core.close();
+}
+
 void PrinterController::setXYZPosition(qreal x, qreal y, qreal z)
 {
     core.setAbsolutePosition();
