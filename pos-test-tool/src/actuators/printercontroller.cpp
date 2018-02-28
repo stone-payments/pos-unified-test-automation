@@ -17,6 +17,7 @@ PrinterController::PrinterController(QObject* parent)
 
     if (core.initSerial(serialPort, QSerialPort::Baud115200) == true) {
         core.home();
+        moveZ(safeZPosition);
     }
 }
 
