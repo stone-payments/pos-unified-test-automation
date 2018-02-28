@@ -44,6 +44,7 @@ void KeyboardController::keyPress(QString key)
         return;
     }
 
+    m_printerController->moveZ(PrinterController::safeZPosition);
     m_printerController->setXYPosition(charPosition.first);
 
     for (int i = 0; i <= charPosition.second; ++i) {
