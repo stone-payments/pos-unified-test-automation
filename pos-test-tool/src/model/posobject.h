@@ -21,7 +21,7 @@ private:
     int m_height;
     QRect m_keyboardROI;
     QRect m_screenROI;
-    QList<KeyMap> m_keyboardMap;
+    QList<KeyMap> m_keyboardMapList;
 
     QPointF m_originPosition;
     friend class PosObjectBuilder;

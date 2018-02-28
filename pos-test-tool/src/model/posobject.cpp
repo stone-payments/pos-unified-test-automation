@@ -2,7 +2,7 @@
 
 QPair<QPointF, int> PosObject::getKeyPosition(QString desiredKey)
 {
-    foreach (KeyMap key, m_keyboardMap) {
+    foreach (KeyMap key, m_keyboardMapList) {
         if (key.keyList.contains(desiredKey)) {
             QPair<QPointF, int> keyPosition(key.position + m_originPosition, key.keyList.indexOf(desiredKey));
             return keyPosition;
