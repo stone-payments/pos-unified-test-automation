@@ -49,8 +49,8 @@
                          </base-DElement>
                          <object>{eea992e0-4406-4dd1-8634-70aaee0266df}</object>
                          <name>PosTestTool</name>
-                         <pos>x:355;y:420</pos>
-                         <rect>x:-295;y:-245;w:590;h:490</rect>
+                         <pos>x:340;y:385</pos>
+                         <rect>x:-315;y:-290;w:630;h:580</rect>
                          <auto-sized>false</auto-sized>
                          <visual-role>0</visual-role>
                         </DObject>
@@ -70,8 +70,8 @@
                          </base-DElement>
                          <object>{c1698e26-4d08-42a1-8b12-59c158aecf4e}</object>
                          <name>PosTestTool</name>
-                         <pos>x:170;y:270</pos>
-                         <rect>x:-70;y:-55;w:140;h:110</rect>
+                         <pos>x:120;y:215</pos>
+                         <rect>x:-70;y:-70;w:140;h:140</rect>
                          <auto-sized>false</auto-sized>
                          <visual-role>0</visual-role>
                          <visual-role2>4</visual-role2>
@@ -93,8 +93,8 @@
                          </base-DElement>
                          <object>{2368a18a-3222-48f3-8cee-d82ab814e960}</object>
                          <name>PosObjectBuilder</name>
-                         <pos>x:170;y:565</pos>
-                         <rect>x:-55;y:-45;w:110;h:90</rect>
+                         <pos>x:120;y:510</pos>
+                         <rect>x:-85;y:-45;w:170;h:90</rect>
                          <visual-role>0</visual-role>
                         </DObject>
                        </base-DObject>
@@ -114,7 +114,7 @@
                          </base-DElement>
                          <object>{fccc7d1d-2c8d-437b-a870-c3b6e937a3f8}</object>
                          <name>CardController</name>
-                         <pos>x:375;y:270</pos>
+                         <pos>x:330;y:215</pos>
                          <rect>x:-50;y:-45;w:100;h:90</rect>
                          <visual-role>0</visual-role>
                         </DObject>
@@ -135,7 +135,7 @@
                          </base-DElement>
                          <object>{2d41f92d-b7b7-493a-8ae6-f2778295458a}</object>
                          <name>PosObject</name>
-                         <pos>x:380;y:565</pos>
+                         <pos>x:330;y:510</pos>
                          <rect>x:-70;y:-75;w:140;h:150</rect>
                          <auto-sized>false</auto-sized>
                          <visual-role>0</visual-role>
@@ -157,8 +157,8 @@
                          </base-DElement>
                          <object>{b99dd017-286e-4b75-92b1-d58c6167f8b8}</object>
                          <name>PrinterController</name>
-                         <pos>x:550;y:400</pos>
-                         <rect>x:-55;y:-50;w:110;h:100</rect>
+                         <pos>x:550;y:345</pos>
+                         <rect>x:-85;y:-55;w:170;h:110</rect>
                          <auto-sized>false</auto-sized>
                          <visual-role>0</visual-role>
                         </DObject>
@@ -179,8 +179,8 @@
                          </base-DElement>
                          <object>{04ac486e-0400-4d52-84f4-22417e663446}</object>
                          <name>KeyboardController</name>
-                         <pos>x:385;y:400</pos>
-                         <rect>x:-60;y:-50;w:120;h:100</rect>
+                         <pos>x:330;y:345</pos>
+                         <rect>x:-70;y:-50;w:140;h:100</rect>
                          <visual-role>0</visual-role>
                         </DObject>
                        </base-DObject>
@@ -223,7 +223,6 @@
                        </base-DRelation>
                        <a>
                         <DAssociationEnd>
-                         <cradinality>1</cradinality>
                          <navigable>true</navigable>
                          <kind>2</kind>
                         </DAssociationEnd>
@@ -248,7 +247,6 @@
                        </base-DRelation>
                        <a>
                         <DAssociationEnd>
-                         <cradinality>1</cradinality>
                          <navigable>true</navigable>
                          <kind>2</kind>
                         </DAssociationEnd>
@@ -316,7 +314,7 @@
                          </base-DElement>
                          <object>{dece9072-df85-47a6-9da7-02b72a3d3ba7}</object>
                          <name>AtCore</name>
-                         <pos>x:795;y:385</pos>
+                         <pos>x:760;y:330</pos>
                          <rect>x:-80;y:-90;w:160;h:180</rect>
                          <auto-sized>false</auto-sized>
                          <visual-role>8</visual-role>
@@ -338,7 +336,7 @@
                          <object>{ad90a6b6-052e-4f7a-84a7-7e49136036a3}</object>
                          <context>AtCore</context>
                          <name>AtCore</name>
-                         <pos>x:795;y:400</pos>
+                         <pos>x:760;y:345</pos>
                          <rect>x:-55;y:-55;w:110;h:110</rect>
                          <visual-role>0</visual-role>
                         </DObject>
@@ -389,9 +387,98 @@
                       </DAssociation>
                      </instance>
                     </item>
+                    <item>
+                     <instance type="DClass">
+                      <DClass>
+                       <base-DObject>
+                        <DObject>
+                         <base-DElement>
+                          <DElement>
+                           <uid>{06360b7a-d569-44e4-b09b-187ca7474f39}</uid>
+                          </DElement>
+                         </base-DElement>
+                         <object>{6fbcdcf0-8eb5-4a19-b94c-1fe974c1755e}</object>
+                         <stereotypes>
+                          <qlist>
+                           <item>struct</item>
+                          </qlist>
+                         </stereotypes>
+                         <context>PosTestTool</context>
+                         <name>KeyMap</name>
+                         <pos>x:550;y:510</pos>
+                         <rect>x:-65;y:-50;w:130;h:100</rect>
+                         <visual-role>5</visual-role>
+                        </DObject>
+                       </base-DObject>
+                       <show-all-members>true</show-all-members>
+                      </DClass>
+                     </instance>
+                    </item>
+                    <item>
+                     <instance type="DDependency">
+                      <DDependency>
+                       <base-DRelation>
+                        <DRelation>
+                         <base-DElement>
+                          <DElement>
+                           <uid>{7665bfc9-2848-4a50-93ab-84301ab16c2e}</uid>
+                          </DElement>
+                         </base-DElement>
+                         <object>{976ad79a-bd5c-4b14-ad26-1cdf35035008}</object>
+                         <a>{08086ab0-fd51-4631-8f39-1795e6f7a1c4}</a>
+                         <b>{06360b7a-d569-44e4-b09b-187ca7474f39}</b>
+                        </DRelation>
+                       </base-DRelation>
+                      </DDependency>
+                     </instance>
+                    </item>
+                    <item>
+                     <instance type="DClass">
+                      <DClass>
+                       <base-DObject>
+                        <DObject>
+                         <base-DElement>
+                          <DElement>
+                           <uid>{3f5fb7d5-a423-4d9e-9c24-53538169a15e}</uid>
+                          </DElement>
+                         </base-DElement>
+                         <object>{f458751a-47af-4fd6-a87e-e4e388f21a48}</object>
+                         <stereotypes>
+                          <qlist>
+                           <item>enum</item>
+                          </qlist>
+                         </stereotypes>
+                         <context>PosTestTool</context>
+                         <name>PosModel</name>
+                         <pos>x:120;y:615</pos>
+                         <rect>x:-40;y:-30;w:80;h:60</rect>
+                         <visual-role>5</visual-role>
+                        </DObject>
+                       </base-DObject>
+                      </DClass>
+                     </instance>
+                    </item>
+                    <item>
+                     <instance type="DDependency">
+                      <DDependency>
+                       <base-DRelation>
+                        <DRelation>
+                         <base-DElement>
+                          <DElement>
+                           <uid>{ee81ee2e-27f1-4d84-9618-dbf01a41ceda}</uid>
+                          </DElement>
+                         </base-DElement>
+                         <object>{3cd072da-2f94-4a2c-b55c-3eafcaf01165}</object>
+                         <a>{d2985dd3-4263-4d61-a7e1-ef7da0d24755}</a>
+                         <b>{3f5fb7d5-a423-4d9e-9c24-53538169a15e}</b>
+                        </DRelation>
+                       </base-DRelation>
+                      </DDependency>
+                     </instance>
+                    </item>
                    </qlist>
                   </elements>
-                  <last-modified>1519771442875</last-modified>
+                  <last-modified>1520262472774</last-modified>
                   <toolbarid>General</toolbarid>
                  </MDiagram>
                 </base-MDiagram>
@@ -639,7 +726,6 @@
                            </base-MRelation>
                            <a>
                             <MAssociationEnd>
-                             <cardinality>1</cardinality>
                              <navigable>true</navigable>
                              <kind>2</kind>
                             </MAssociationEnd>
@@ -668,7 +754,6 @@
                            </base-MRelation>
                            <a>
                             <MAssociationEnd>
-                             <cardinality>1</cardinality>
                              <navigable>true</navigable>
                              <kind>2</kind>
                             </MAssociationEnd>
@@ -688,28 +773,28 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{c4dd2bb0-9916-46e2-a78e-897bd8148145}</uid>
+                    <uid>{8c082118-c97b-4899-b926-422410499a88}</uid>
                     <type>2</type>
                     <declaration>+ insertCard()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{19992ffc-00c7-453e-bea2-ebfcc03b98f2}</uid>
+                    <uid>{3dd005f1-847e-446a-bfe6-f387b8fa8147}</uid>
                     <type>2</type>
                     <declaration>+ removeCard()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{23496656-1341-4446-9fae-4aa4b7a2a769}</uid>
+                    <uid>{234f937e-fa8c-4203-b4f6-cdc919afccb6}</uid>
                     <type>2</type>
                     <declaration>+ write()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{dc59ea8b-27c2-47c6-a577-c03daa119c3b}</uid>
+                    <uid>{bee5e094-b5bf-4a46-9807-b4aa1718a9aa}</uid>
                     <type>2</type>
                     <declaration>+ keyPress()</declaration>
                    </MClassMember>
@@ -827,23 +912,23 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{1eabfbb0-af32-44d6-8c56-8d2505204b7b}</uid>
+                    <uid>{afc59bdd-b224-4873-b3d9-e12df866f03d}</uid>
                     <type>2</type>
-                    <declaration>+ setXYPosition()</declaration>
+                    <declaration>+ setXYPosition (qreal, qreal)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{911b2a6f-d7ec-4eaa-bcec-ec99c365f50f}</uid>
+                    <uid>{8932af19-9bd5-4cbb-b0ab-0c8ea8ee945f}</uid>
                     <type>2</type>
-                    <declaration>+ moveZ()</declaration>
+                    <declaration>+ moveZ (qreal)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{ff802e84-ed69-4b8e-b55d-5769e21b82cd}</uid>
+                    <uid>{2b258f98-0599-4436-b40b-b28ecbd351f8}</uid>
                     <type>2</type>
-                    <declaration>+ wait()</declaration>
+                    <declaration>+ wait (int)</declaration>
                    </MClassMember>
                   </item>
                  </qlist>
@@ -994,23 +1079,23 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{85617f14-2382-48ac-9b63-23c67bbc5099}</uid>
+                    <uid>{56831f3b-9de2-42b8-b777-3757b59c3523}</uid>
                     <type>2</type>
-                    <declaration>+ write()</declaration>
+                    <declaration>+ write(QString)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{490401b0-4e3f-4a2f-9b35-d18883576f71}</uid>
+                    <uid>{3922eab2-ccd9-4c2f-95db-8d76b458c77f}</uid>
                     <type>2</type>
-                    <declaration>+ keyPress()</declaration>
+                    <declaration>+ keyPress(QString)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{735a197e-74db-4ea2-86c0-165e659e7c09}</uid>
+                    <uid>{e235d779-8493-4b5c-a4b2-c23fca4fa220}</uid>
                     <type>2</type>
-                    <declaration>+ setDevice()</declaration>
+                    <declaration>+ setDevice(PosObject*)</declaration>
                    </MClassMember>
                   </item>
                  </qlist>
@@ -1109,6 +1194,28 @@
                         </target>
                        </handle>
                       </item>
+                      <item>
+                       <handle>
+                        <uid>{976ad79a-bd5c-4b14-ad26-1cdf35035008}</uid>
+                        <target>
+                         <instance type="MDependency">
+                          <MDependency>
+                           <base-MRelation>
+                            <MRelation>
+                             <base-MElement>
+                              <MElement>
+                               <uid>{976ad79a-bd5c-4b14-ad26-1cdf35035008}</uid>
+                              </MElement>
+                             </base-MElement>
+                             <a>{2d41f92d-b7b7-493a-8ae6-f2778295458a}</a>
+                             <b>{6fbcdcf0-8eb5-4a19-b94c-1fe974c1755e}</b>
+                            </MRelation>
+                           </base-MRelation>
+                          </MDependency>
+                         </instance>
+                        </target>
+                       </handle>
+                      </item>
                      </qlist>
                     </handles>
                    </handles>
@@ -1119,28 +1226,21 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{8dda07c7-a545-41cf-ae09-db7403ea3e46}</uid>
+                    <uid>{a5bc4ae6-3c1a-44e6-a865-28e2430675a9}</uid>
                     <type>1</type>
                     <declaration>- model : string</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{46f47674-d288-48ed-82d4-b2cc8719380e}</uid>
+                    <uid>{c460d00b-bbeb-4f65-b2f3-a2b5be51a8fd}</uid>
                     <type>1</type>
                     <declaration>- keyMap : List&lt;KeyMap&gt;</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{20d96863-1f13-459c-bae9-3d50d3a7db39}</uid>
-                    <type>1</type>
-                    <declaration>- originPosition</declaration>
-                   </MClassMember>
-                  </item>
-                  <item>
-                   <MClassMember>
-                    <uid>{8bb5b057-91a5-4878-a5da-aab0536720f4}</uid>
+                    <uid>{623d13b4-5652-446c-9744-087a7bc16c05}</uid>
                     <type>2</type>
                     <declaration>+ getKeyPosition()</declaration>
                    </MClassMember>
@@ -1192,6 +1292,28 @@
                         </target>
                        </handle>
                       </item>
+                      <item>
+                       <handle>
+                        <uid>{3cd072da-2f94-4a2c-b55c-3eafcaf01165}</uid>
+                        <target>
+                         <instance type="MDependency">
+                          <MDependency>
+                           <base-MRelation>
+                            <MRelation>
+                             <base-MElement>
+                              <MElement>
+                               <uid>{3cd072da-2f94-4a2c-b55c-3eafcaf01165}</uid>
+                              </MElement>
+                             </base-MElement>
+                             <a>{2368a18a-3222-48f3-8cee-d82ab814e960}</a>
+                             <b>{f458751a-47af-4fd6-a87e-e4e388f21a48}</b>
+                            </MRelation>
+                           </base-MRelation>
+                          </MDependency>
+                         </instance>
+                        </target>
+                       </handle>
+                      </item>
                      </qlist>
                     </handles>
                    </handles>
@@ -1202,16 +1324,16 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{3e060b59-9d7d-43d0-9a40-4a4af2829da1}</uid>
+                    <uid>{cff199c3-8f5c-4d31-b1f1-6c8e8655ce02}</uid>
                     <type>2</type>
-                    <declaration>+ getPosObject()</declaration>
+                    <declaration>+ PosObject* getPosObject()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{d08a03bb-24cf-4ba7-8cf5-a97617a086f7}</uid>
+                    <uid>{913969ac-81b2-43fd-8541-d4b390b7d56d}</uid>
                     <type>2</type>
-                    <declaration>-  parse()</declaration>
+                    <declaration>-  void parse()</declaration>
                    </MClassMember>
                   </item>
                  </qlist>
@@ -1241,14 +1363,14 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{5b95c28c-9505-4ee7-9ca4-f7f9a29c5015}</uid>
+                    <uid>{65706bde-b87b-4012-9544-957fd3e06775}</uid>
                     <type>2</type>
                     <declaration>+ insert()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{77cdff8f-8293-4ff3-a3ca-4176af903134}</uid>
+                    <uid>{fe3dec1e-433c-489a-ad00-520b3d5bc315}</uid>
                     <type>2</type>
                     <declaration>+ remove()</declaration>
                    </MClassMember>
@@ -1295,6 +1417,84 @@
                    </MElement>
                   </base-MElement>
                   <name>PosTestTool</name>
+                  <children>
+                   <handles>
+                    <handles>
+                     <qlist>
+                      <item>
+                       <handle>
+                        <uid>{6fbcdcf0-8eb5-4a19-b94c-1fe974c1755e}</uid>
+                        <target>
+                         <instance type="MClass">
+                          <MClass>
+                           <base-MObject>
+                            <MObject>
+                             <base-MElement>
+                              <MElement>
+                               <uid>{6fbcdcf0-8eb5-4a19-b94c-1fe974c1755e}</uid>
+                               <stereotypes>
+                                <qlist>
+                                 <item>struct</item>
+                                </qlist>
+                               </stereotypes>
+                              </MElement>
+                             </base-MElement>
+                             <name>KeyMap</name>
+                            </MObject>
+                           </base-MObject>
+                           <members>
+                            <qlist>
+                             <item>
+                              <MClassMember>
+                               <uid>{e7ca7f91-d179-45ab-b3b6-bef0054f4cdf}</uid>
+                               <type>1</type>
+                               <declaration>+ position : QPointF</declaration>
+                              </MClassMember>
+                             </item>
+                             <item>
+                              <MClassMember>
+                               <uid>{9b727570-16bd-4341-afb0-8d1e69411a3e}</uid>
+                               <type>1</type>
+                               <declaration>+ keyList: QStringList</declaration>
+                              </MClassMember>
+                             </item>
+                            </qlist>
+                           </members>
+                          </MClass>
+                         </instance>
+                        </target>
+                       </handle>
+                      </item>
+                      <item>
+                       <handle>
+                        <uid>{f458751a-47af-4fd6-a87e-e4e388f21a48}</uid>
+                        <target>
+                         <instance type="MClass">
+                          <MClass>
+                           <base-MObject>
+                            <MObject>
+                             <base-MElement>
+                              <MElement>
+                               <uid>{f458751a-47af-4fd6-a87e-e4e388f21a48}</uid>
+                               <stereotypes>
+                                <qlist>
+                                 <item>enum</item>
+                                </qlist>
+                               </stereotypes>
+                              </MElement>
+                             </base-MElement>
+                             <name>PosModel</name>
+                            </MObject>
+                           </base-MObject>
+                          </MClass>
+                         </instance>
+                        </target>
+                       </handle>
+                      </item>
+                     </qlist>
+                    </handles>
+                   </handles>
+                  </children>
                  </MObject>
                 </base-MObject>
                </MPackage>
@@ -1361,28 +1561,28 @@
                             <qlist>
                              <item>
                               <MClassMember>
-                               <uid>{2e87d08b-eb63-4aad-8915-9546bd7c31f1}</uid>
+                               <uid>{03e1638c-60ff-4f4b-8c0f-027144780cff}</uid>
                                <type>2</type>
                                <declaration>+ initSerial()</declaration>
                               </MClassMember>
                              </item>
                              <item>
                               <MClassMember>
-                               <uid>{5c0e71ee-c2df-44d8-aaa6-c47ac77e0ac9}</uid>
+                               <uid>{75aec2e2-0c28-496a-ad55-e6b6dbb2d349}</uid>
                                <type>2</type>
                                <declaration>+ home()</declaration>
                               </MClassMember>
                              </item>
                              <item>
                               <MClassMember>
-                               <uid>{5f57e39e-3ea1-49a6-b777-205f30deb765}</uid>
+                               <uid>{28b11e66-e753-4e34-ae83-3f75323e52a3}</uid>
                                <type>2</type>
                                <declaration>+ pushCommand()</declaration>
                               </MClassMember>
                              </item>
                              <item>
                               <MClassMember>
-                               <uid>{ff834b63-bfa2-4f25-91ca-54f6b8bf6af9}</uid>
+                               <uid>{9e2dcd91-587e-45e9-b7f3-04cf3a4ee09d}</uid>
                                <type>2</type>
                                <declaration>+ close()</declaration>
                               </MClassMember>
