@@ -7,6 +7,6 @@ int main(int argc, char* argv[])
 
     PosTestTool ptt(PosModel::PAX_S920);
     ptt.write("tcc");
-
+    ptt.showScreen();
     return a.exec();
 }

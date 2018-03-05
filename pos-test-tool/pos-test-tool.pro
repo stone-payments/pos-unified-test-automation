@@ -50,8 +50,6 @@ unix {
 DISTFILES += \
     res/model/PAX_S920.json \
     classdiagram.qmodel \
-    components.qmodel \
-    sequentialcardcontroller.qmodel \
     src/paymentTest.py
 
 RESOURCES += \
