@@ -1,4 +1,4 @@
-#include "posobjectbuilder.h"
+#include "posobjectfactory.h"
 #include <QDebug>
 
 PosObjectFactory::PosObjectFactory() {}
