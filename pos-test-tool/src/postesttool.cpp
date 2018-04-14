@@ -2,7 +2,7 @@
 #include "cardcontroller.h"
 #include "keyboardcontroller.h"
 #include "posobject.h"
-#include "posobjectbuilder.h"
+#include "posobjectfactory.h"
 #include "printercontroller.h"
 
 #include <QObject>
@@ -12,7 +12,7 @@ PosTestTool::PosTestTool(PosModel device)
     , m_cardController(new CardController(this))
     , m_printerController(new PrinterController(this))
 {
-    m_posObject = PosObjectBuilder::getPosObject(device);
+    m_posObject = PosObjectFactory::getPosObject(device);
     m_keyboardController->setDevice(m_posObject);
     m_keyboardController->setPrinterController(m_printerController);
 }

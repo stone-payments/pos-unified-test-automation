@@ -29,18 +29,18 @@ SOURCES += \
     src/actuators/keyboardcontroller.cpp \
     src/actuators/printercontroller.cpp \
     src/model/posobject.cpp \
-    src/model/posobjectbuilder.cpp \
-    src/postesttool.cpp
+    src/postesttool.cpp \
+    src/model/posobjectfactory.cpp
 
 HEADERS += \
     src/actuators/cardcontroller.h \
     src/actuators/keyboardcontroller.h \
     src/actuators/printercontroller.h \
     src/model/posobject.h \
-    src/model/posobjectbuilder.h \
     src/model/pos_types.h \
     src/pos-test-tool_global.h \
-    src/postesttool.h
+    src/postesttool.h \
+    src/model/posobjectfactory.h
 
 unix {
     target.path = /usr/lib

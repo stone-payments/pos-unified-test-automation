@@ -1,9 +1,9 @@
 #include "posobjectbuilder.h"
 #include <QDebug>
 
-PosObjectBuilder::PosObjectBuilder() {}
+PosObjectFactory::PosObjectFactory() {}
 
-PosObject* PosObjectBuilder::getPosObject(PosModel model)
+PosObject* PosObjectFactory::getPosObject(PosModel model)
 {
     PosObject* newObject = nullptr;
     switch (model) {
@@ -17,7 +17,7 @@ PosObject* PosObjectBuilder::getPosObject(PosModel model)
     return newObject;
 }
 
-PosObject* PosObjectBuilder::parse(QString jsonPath)
+PosObject* PosObjectFactory::parse(QString jsonPath)
 {
     QFile file(jsonPath);
     file.open(QIODevice::ReadOnly);

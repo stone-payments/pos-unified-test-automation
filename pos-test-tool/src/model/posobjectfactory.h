@@ -1,16 +1,16 @@
-#ifndef POSOBJECTBUILDER_H
-#define POSOBJECTBUILDER_H
+#ifndef POSOBJECTFACTORY_H
+#define POSOBJECTFACTORY_H
 
 #include "pos_types.h"
 #include "posobject.h"
 
-class PosObjectBuilder {
+class PosObjectFactory {
 public:
     static PosObject* getPosObject(PosModel model);
 
 private:
-    PosObjectBuilder();
+    PosObjectFactory();
     static PosObject* parse(QString jsonPath);
 };
 
-#endif // POSOBJECTBUILDER_H
+#endif // POSOBJECTFACTORY_H
