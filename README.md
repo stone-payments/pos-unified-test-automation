@@ -22,4 +22,4 @@ Special Thanks To
 - [Flávio Luis de Mello, D.Sc.](http://www.del.ufrj.br/~fmello) - Project Advisor
 
 ## Publication
-- [Final Graduation Project monography (in portuguese)](http://monografias.poli.ufrj.br/monografias/monopoli10025225.pdf/)
+- [Final Graduation Project monography (in portuguese)](http://monografias.poli.ufrj.br/monografias/monopoli10025225.pdf)
